@@ -1,2 +1,30 @@
-<p>servers works!</p>
-<app-server></app-server>
+<div class="conainer">
+  <div class="coll">
+    <div class="row-3 form-control">
+      <label>User name</label>
+      <input
+      class="form-control"
+        type="text"
+        placeholder="Enter User name"
+        [(ngModel)]="userName">
+        <p>{{userName}}</p>
+      <button
+      class="btn btn-secondary"
+      (click)="onSetUserName()"
+      [disabled]="userName==''">Submit</button>
+      <button
+      class="btn btn-secondary"
+      (click)="onReset()"
+      [disabled]="userName==''">Reset</button>
+    </div>
+    <p *ngIf="created; else noUser">User {{userName}} was created</p>
+    <ng-template #noUser>
+      <p>No user was created</p>
+    </ng-template>
+
+  </div>
+</div>
+
+<app-server *ngFor="let user of users" [userName]="user"></app-server>
+
+

@@ -1,3 +1,16 @@
-<p>test works! {{parent}}</p>
-<app-block1></app-block1>
+
+
+<app-block1 (objCreated)="onChildtAdded($event)"></app-block1>
+
+<div class="row">
+  <div class="coll my-4">
+   <h3>List of objs:</h3>
+    <div class="list-group" *ngFor="let obj of objs">
+      <div class="list-group-item">
+        <p>Name: {{obj.name}}</p>
+        <p>Age: {{obj.age}}</p>
+      </div>
+    </div>
+  </div>
+</div>
 

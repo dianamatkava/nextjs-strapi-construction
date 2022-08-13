@@ -15,6 +15,7 @@ import { RecipeItemComponent } from './components/recipe/recipe-item/recipe-item
 import { RecipeDetailComponent } from './components/recipe/recipe-detail/recipe-detail.component';
 import { TestComponent } from './test/test/test.component';
 import { Block1Component } from './test/block1/block1.component';
+import { Block2Component } from './test/block2/block2.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { Block1Component } from './test/block1/block1.component';
     RecipeItemComponent,
     RecipeDetailComponent,
     TestComponent,
-    Block1Component
+    Block1Component,
+    Block2Component
   ],
   imports: [
     BrowserModule,

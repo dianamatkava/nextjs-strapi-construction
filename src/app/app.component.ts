@@ -8,7 +8,12 @@ import { NgForm } from '@angular/forms';
 })
 export class AppComponent {
   title = 'CookLikeGuru'
+  pageName: string = 'recipe';
 
   onSubmit(f: NgForm) {
+  }
+
+  onNavigate(page: string) {
+    this.pageName = page;
   }
 }

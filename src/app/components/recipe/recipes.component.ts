@@ -1,4 +1,5 @@
-import { Component } from "@angular/core";
+import { Component, Output } from "@angular/core";
+import { Recipe } from "src/app/models/recipes.models";
 
 
 @Component({
@@ -6,7 +7,7 @@ import { Component } from "@angular/core";
   templateUrl: './recipes.component.html'
 })
 export class RecipesComponent {
-
+  selectRecipe: any = null;
 }
 
 

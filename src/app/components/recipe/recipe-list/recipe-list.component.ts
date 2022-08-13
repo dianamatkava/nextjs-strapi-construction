@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Recipe } from 'src/app/models/recipes.models';
-
 @Component({
   selector: 'app-recipe-list',
   templateUrl: './recipe-list.component.html',
@@ -12,9 +11,15 @@ export class RecipeListComponent implements OnInit {
     new Recipe(2, 'Test Recipe 2', 'desc', 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/mike-garten-egg-ideas-basil-arugla-egg-toast-0417-1515526945.jpg?crop=1xw:1xh;center,top&resize=480:*')
   ];
 
+  @Output() selectedRecipe = new EventEmitter<Recipe>();
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  selectRecipe(recipe: Recipe) {
+    this.selectedRecipe.emit(recipe);
   }
 
 }

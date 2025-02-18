@@ -1,6 +1,6 @@
-export default function CTACall () {
+export default function CTACall ({className}: {className?: string}) {
   return (
-    <div data-svg-wrapper className="border border-black rounded-3xl">
+    <div data-svg-wrapper className={"border border-black rounded-3xl" + ` ${className}`}>
       <svg width="45" height="45" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect x="1" y="1" width="53" height="53" rx="26.5" fill="white"/>
         <rect x="1" y="1" width="53" height="53" rx="26.5" stroke="white" stroke-width="2"/>

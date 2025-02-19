@@ -8,9 +8,7 @@ import HeaderH1 from "@/app/ui/Components/HeaderH1";
 export default function AboutMe() {
   return (
     <div className="w-full full justify-center items-center gap-8 flex flex-col">
-      <SectionHeader name={"About Me"}>
-        <IoPersonSharp size={16} color={'#fe7800'}/>
-      </SectionHeader>
+      <SectionHeader name={"About Me"}/>
       <div className="w-full full justify-center items-center gap-8 inline-flex">
         <div className="w-full sm:w-1/2 h-fit flex-col justify-start items-start gap-5 inline-flex">
           <div className="self-stretch h-fit flex-col justify-between items-start flex gap-10">

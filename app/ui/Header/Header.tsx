@@ -14,10 +14,10 @@ export default function Header () {
           className="w-full h-fit p-5 pb-12 flex-col justify-between items-start inline-flex">
           <div className="w-full inline-flex">
             <div className="w-full inline-flex gap-3 items-center">
-              <FaInstagram size={14} color={'white'}/>
-              <LuFacebook size={14} color={'white'}/>
-              <FaWhatsapp size={14} color={'white'}/>
-              <FiPhone size={14} color={'white'}/>
+              <FaInstagram size={15} color={'white'}/>
+              <LuFacebook size={15} color={'white'}/>
+              <FaWhatsapp size={15} color={'white'}/>
+              <FiPhone size={15} color={'white'}/>
             </div>
             <div className="w-full inline-flex justify-start items-center">
               <Logo/>

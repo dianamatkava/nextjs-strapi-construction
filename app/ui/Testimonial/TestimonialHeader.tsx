@@ -1,13 +1,10 @@
 import SectionHeader from "@/app/ui/Components/SectionHeader";
-import {FaRegCommentDots} from "react-icons/fa";
 import HeaderH1 from "@/app/ui/Components/HeaderH1";
 
 export default function TestimonialHeader () {
   return (
     <div className="w-full h-fit flex-col justify-start items-center gap-5 inline-flex">
-      <SectionHeader name={"Testimonial"}>
-        <FaRegCommentDots size={16} color={'#fe7800'}/>
-      </SectionHeader>
+      <SectionHeader name={"Testimonial"}/>
       <div className="self-stretch flex-col justify-start items-center gap-5 flex">
         <HeaderH1 id={'testimonial'} title={'Your One-Stop Solution for All Repairs'} className={''}/>
         <div

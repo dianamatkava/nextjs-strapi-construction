@@ -8,7 +8,7 @@ import Image from "next/image";
 export default function HeroHeader () {
   return (
     <div
-      className="bg-[#0e1518]/80 w-full h-fit py-6 px-5 sm:px-12 justify-center items-center relative">
+      className="bg-[#0e1518]/85 w-full h-fit py-0 px-5 sm:px-10 justify-center items-center relative">
       <Image
         src="/Header.jpg"
         alt="Header Background"

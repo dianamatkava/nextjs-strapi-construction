@@ -1,6 +1,3 @@
-import { FaPhoneAlt } from "react-icons/fa";
-
-
 export default function ContactDetail ({name, title, value, children}: {name: string, title?: string, value: string, children?: React.ReactElement}) {
   return (
     <div className="w-full max-w-[400px] justify-between items-center gap-5 inline-flex">

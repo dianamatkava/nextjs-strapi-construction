@@ -31,10 +31,10 @@ const config: Config = {
       },
       colors: {
         bgCover: '#010c11',
-        primary: '#FFFFFF',
-        highlight: "#fe7800",
-        darkSecondary: "#e4e4e4",
-        darkPrimary: "#000000",
+        bgPrimary: '#373940',
+        bgDarkPrimary: '#e4e4e4',
+        primary: '#000000',
+        darkPrimary: '#e4e4e4',
       },
     },
     keyframes: {

@@ -1,5 +1,5 @@
 import React from "react";
-import StepWrapper from "@/app/ui/ChooseUs/StepWrapper";
+import StepWrapper from "@/app/ui/Steps/StepWrapper";
 
 export default function ChooseUs () {
   return (

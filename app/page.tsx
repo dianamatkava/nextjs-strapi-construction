@@ -5,7 +5,8 @@ import AboutMe from "@/app/ui/AboutMe/AboutMe";
 import Testimonial from "@/app/ui/Testimonial/Testimonial";
 import ContactUs from "@/app/ui/ContactUs/ContactUs";
 import Collaborators from "@/app/ui/Components/Collaborators";
-import ChooseUs from "@/app/ui/ChooseUs/ChooseUs";
+import ChooseUs from "@/app/ui/Steps/ChooseUs";
+import StepByStepGuide from "@/app/ui/Steps/StepByStepGuide";
 
 export default function Page() {
   return (
@@ -14,8 +15,9 @@ export default function Page() {
       <ServicePreview/>
       <Services/>
       <ChooseUs/>
-      <ContactUsBlock/>
       <AboutMe/>
+      <StepByStepGuide/>
+      <ContactUsBlock/>
       <Testimonial/>
       <ContactUs/>
     </main>

@@ -11,7 +11,6 @@ import AIGLogo from '@/app/assets/svg/AIG.svg';
 import AmericanFamilyLogo from '@/app/assets/svg/AmericanFamily.svg';
 import FarmersInsuranceLogo from '@/app/assets/svg/FarmersInsurance.svg';
 import NationwideLogo from '@/app/assets/svg/Nationwide.svg';
-import Review from "@/app/ui/Testimonial/Review";
 
 
 export default function Collaborators() {

@@ -16,6 +16,6 @@ export default function ServicePreview () {
           </div>
         </div>
       </div>
-</div>
+    </div>
 )
 }

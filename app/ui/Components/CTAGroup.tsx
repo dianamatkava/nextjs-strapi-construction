@@ -1,12 +1,16 @@
 import CTAPrimary from "@/app/ui/Components/CTAPrimary";
 import CTACall from "@/app/ui/Components/CTACall";
+import React from "react";
 
-export default function CTAGroup ({children=null}) {
+export default function CTAGroup (
+  {primaryButtonStyle, secondaryButtonStyle, children=null}:
+    {primaryButtonStyle?: string, secondaryButtonStyle?: string, children?: React.ReactElement}
+) {
   return (
     <div className="flex-col justify-center items-center gap-4 flex">
       <div className="self-stretch justify-center items-center gap-4 inline-flex">
-        <CTAPrimary className={'text-black bg-primary border-primary'}/>
-        <CTACall className={'bg-none border-primary'}/>
+        <CTAPrimary className={primaryButtonStyle}/>
+        <CTACall className={secondaryButtonStyle}/>
         {children}
       </div>
     </div>

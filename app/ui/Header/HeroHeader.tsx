@@ -33,7 +33,7 @@ export default function HeroHeader () {
                   services, including residential. and reconstruction services
                 </div>
               </div>
-              <CTAGroup>
+              <CTAGroup primaryButtonStyle={'bg-bgDarkPrimary text-black'} secondaryButtonStyle={'text-white border-white'}>
                 <div
                   className="text-center text-[#e4e4e4] text-sm font-medium font-['Plus Jakarta Sans']">Available
                   24/7

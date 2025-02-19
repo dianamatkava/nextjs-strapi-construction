@@ -7,7 +7,6 @@ import { MdOutlineWhatsapp } from "react-icons/md";
 import HeaderH1 from "@/app/ui/Components/HeaderH1";
 
 
-
 export default function ContactUs () {
   return (
     <div className="w-full h-full flex-col justify-center items-start gap-5 inline-flex">

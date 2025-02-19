@@ -8,7 +8,7 @@ import React from "react";
 export default function Services() {
   return (
     <div className="w-full h-full flex flex-col items-start justify-start gap-12">
-      <ServiceHeader/>
+      {/*<ServiceHeader/>*/}
       <div className="w-full flex gap-12 items-stretch">
         <div className="w-full md:w-2/3 max-w-[800px] flex flex-col gap-4">
           <ActiveService/>

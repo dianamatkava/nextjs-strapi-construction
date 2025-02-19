@@ -28,7 +28,7 @@ export default function ContactUsBlock () {
               <Tick key={6} title={'24/7 Emergency Repair Services'}/>
             </div>
           </div>
-          <CTAGroup>
+          <CTAGroup primaryButtonStyle={'bg-bgDarkPrimary text-black'} secondaryButtonStyle={'text-white border-white'}>
             <div className="w-fit h-full flex-col justify-center items-start gap-1 inline-flex">
               <div
                 className="self-stretch text-white text-sm font-semibold font-['Plus Jakarta Sans']">Contact

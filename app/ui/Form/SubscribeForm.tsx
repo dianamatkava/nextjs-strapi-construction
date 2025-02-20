@@ -6,6 +6,7 @@ import SuccessBox from "@/app/ui/Form/SuccessBox";
 import {LuSend} from "react-icons/lu";
 import {useState} from "react";
 import InputLineField from "@/app/ui/Form/InputLineField";
+import InputDarkLineField from "@/app/ui/Form/InputDarkLineField";
 
 
 export default function SubscribeForm() {
@@ -57,7 +58,7 @@ export default function SubscribeForm() {
   return (
     <form onSubmit={(e)=> handleSubmitForm(e)} className="self-stretch h-[86.50px] flex-col justify-start items-start gap-4 flex w-[250px]">
       <div className="self-stretch justify-between items-center inline-flex w-full">
-        <InputLineField label={'Email'} type={'email'} name={"email"} placeholder={"example@example.com"} labelClassName={'text-white'}>
+        <InputDarkLineField label={'Email'} type={'email'} name={"email"} placeholder={"example@example.com"} labelClassName={'text-white'}>
           <div className="z-0 absolute bottom-3 right-1">
 
             <button type={'submit'}
@@ -66,7 +67,7 @@ export default function SubscribeForm() {
               Send
             </button>
           </div>
-        </InputLineField>
+        </InputDarkLineField>
       </div>
 
       <div className="self-stretch justify-start items-center gap-2.5 inline-flex">

@@ -18,7 +18,6 @@ export default function StepByStepGuideHeader () {
       </div>
       <div
         className="w-full h-fit justify-end items-center inline-flex">
-        <CTAPrimary className={'bg-bgPrimary text-white'}/>
       </div>
     </div>
   )

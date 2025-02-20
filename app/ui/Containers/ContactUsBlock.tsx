@@ -6,7 +6,7 @@ import HeaderH1 from "@/app/ui/Components/HeaderH1";
 export default function ContactUsBlock () {
   return (
     <div
-      className="w-full h-fit px-5 sm:px-20 py-5 sm:py-14 bg-black/40 rounded-lg justify-between items-center inline-flex relative">
+      className="w-full h-fit px-5 sm:px-20 py-5 sm:py-14 bg-black/40 rounded-3xl justify-between items-center inline-flex relative">
       <Image
         src="/Image1.jpeg"
         alt="Background"

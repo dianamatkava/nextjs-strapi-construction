@@ -1,6 +1,4 @@
 import React from "react";
-import StepWrapper from "@/app/ui/Steps/StepWrapper";
-import CTAPrimary from "@/app/ui/Components/CTAPrimary";
 
 export default function StepByStepGuideHeader () {
   return (

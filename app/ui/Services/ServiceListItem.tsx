@@ -1,4 +1,4 @@
-export default function ServiceItem ({title, number}: {title: string, number: string}) {
+export default function ServiceListItem ({title, number}: {title: string, number: string}) {
   return (
     <div className='w-full h-fit flex items-center justify-start gap-2'>
       <div

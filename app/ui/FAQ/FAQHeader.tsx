@@ -1,7 +1,6 @@
 import React from "react";
 import HeaderH1 from "@/app/ui/Components/HeaderH1";
 import InputLineField from "@/app/ui/Form/InputLineField";
-import {LuSend} from "react-icons/lu";
 import CTAPrimary from "@/app/ui/Components/CTAPrimary";
 import {MdOutlineMail} from "react-icons/md";
 

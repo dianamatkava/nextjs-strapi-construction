@@ -7,7 +7,7 @@ export default function FAQ() {
   return (
     <div className="w-full flex flex-col justify-center items-start gap-5">
       <div className="w-full inline-flex justify-between items-start gap-24">
-        <div className={'w-3/5 max-w-[500px] flex flex-col justify-start items-start text-start gap-8'}>
+        <div className={'w-3/5 max-w-[500px] flex flex-col justify-start items-start text-start gap-4'}>
           <SectionHeader name={'FAQ'}/>
           <FAQHeader/>
         </div>

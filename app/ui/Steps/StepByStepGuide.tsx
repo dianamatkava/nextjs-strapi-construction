@@ -8,10 +8,10 @@ export default function StepByStepGuide () {
     <div
       className="w-full h-fit px-16 py-12 bg-[#f6f8fc] flex-col justify-center items-center inline-flex">
       <div className="justify-between items-center inline-flex gap-12">
-        <div className="w-1/2 flex-col justify-between items-start inline-flex">
+        <div className="w-full flex-col justify-between items-start inline-flex">
           <StepByStepGuideHeader/>
         </div>
-        <div className="w-1/2 flex-col justify-between items-start inline-flex gap-3">
+        <div className="w-full flex-col justify-between items-start inline-flex gap-3">
           <StepByStepGuideItem
             number={1}
             isActive={true}

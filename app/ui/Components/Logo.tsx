@@ -20,7 +20,7 @@ export default function Logo () {
         <div
           className="w-1.5 h-1.5 right-3 top-5 absolute origin-top-left rotate-[13.91deg] bg-[#373940] rounded-full border border-white"/>
       </div>
-      <div className="text-white text-sm font-normal font-['Anta']">Otter Water</div>
+      <div className="text-sm font-normal font-['Anta']">Otter Water</div>
     </div>
   )
 }

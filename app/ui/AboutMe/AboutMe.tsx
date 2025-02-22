@@ -1,6 +1,5 @@
 import CTAGroup from "@/app/ui/Components/CTAGroup";
 import SectionHeader from "@/app/ui/Components/SectionHeader";
-import {IoPersonSharp} from "react-icons/io5";
 import ImageContainer from "@/app/ui/Components/ImageContainer";
 import React from "react";
 import HeaderH1 from "@/app/ui/Components/HeaderH1";

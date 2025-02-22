@@ -1,7 +1,7 @@
 import {FiInstagram, FiPhone} from "react-icons/fi";
 import {MdOutlineAlternateEmail} from "react-icons/md";
 import Link from "next/link";
-import SubscribeForm from "@/app/ui/Form/SubscribeForm";
+import SubscribeForm from "@/app/ui/ContactUs/SubscribeForm";
 import Logo from "@/app/ui/Components/Logo";
 import {FaFacebookF} from "react-icons/fa";
 import CTAPrimary from "@/app/ui/Components/CTAPrimary";
@@ -23,7 +23,7 @@ export default function Footer () {
           className="w-full max-w-[700px] px-5 text-center text-white text-5xl font-normal leading-18">Get
           comprehensive Solution for Repair Services
         </div>
-        <CTAPrimary title={'Contact'} className={'text-white'}/>
+        <CTAPrimary title={'Contact'} className={'bg-bgDarkPrimary text-black'}/>
       </div>
       <div
         className="self-stretch px-5 md:px-10 sm:px-20 flex-col justify-between items-start flex text-md">
@@ -85,7 +85,7 @@ export default function Footer () {
           </div>
         </div>
         <div
-          className="self-stretch pt-[30px] pb-2.5 border-t border-neutral-700 justify-between items-start inline-flex text-sm">
+          className="self-stretch pt-4 pb-2.5 border-t border-neutral-700 justify-between items-start inline-flex text-sm">
           <div className="text-[#e2e2e2] text-xs font-normal cursor-pointer hover:text-[#f5efe7] w-1/2">© 2025 All
             Rights Reserved
           </div>

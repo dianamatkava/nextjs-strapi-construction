@@ -1,7 +1,5 @@
-import Tick from "@/app/ui/Components/Tick";
 import Image from 'next/image';
 import CTAGroup from "@/app/ui/Components/CTAGroup";
-import HeaderH1 from "@/app/ui/Components/HeaderH1";
 
 export default function ContactUsBlock () {
   return (

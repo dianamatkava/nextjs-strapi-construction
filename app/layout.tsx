@@ -1,6 +1,6 @@
 import '@/app/ui/global.css';
-import HeroHeader from "@/app/ui/Header/HeroHeader";
 import Footer from "@/app/ui/Footer/Footer";
+import AppHeader from "@/app/ui/Header/AppHeader";
 
 export default function RootLayout({
   children,
@@ -10,7 +10,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`antialiased`}>
-        <HeroHeader/>
+        <AppHeader/>
         {children}
         <Footer/>
       </body>

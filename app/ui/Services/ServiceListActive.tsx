@@ -1,9 +1,7 @@
-import Tag from "@/app/ui/Components/Tag";
-import ImageContainer from "@/app/ui/Components/ImageContainer";
 import React from "react";
 import HeaderH1 from "@/app/ui/Components/HeaderH1";
 
-export default function ActiveService () {
+export default function ServiceListActive () {
   return (
     <div className="w-full h-fit flex flex-row items-start justify-start">
       <div

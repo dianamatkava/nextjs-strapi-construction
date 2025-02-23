@@ -8,7 +8,7 @@ import Collaborators from "@/app/ui/Components/Collaborators";
 import ChooseUs from "@/app/ui/Steps/ChooseUs";
 import StepByStepGuide from "@/app/ui/Steps/StepByStepGuide";
 import FAQ from "@/app/ui/FAQ/FAQ";
-import News from "@/app/ui/News/News";
+import NewsList from "@/app/ui/News/NewsList";
 import SectionHeader from "@/app/ui/Components/SectionHeader";
 import React from "react";
 
@@ -26,7 +26,7 @@ export default function Page() {
       </div>
       <StepByStepGuide/>
       {/*<ContactUsBlock/>*/}
-      <News/>
+      <NewsList/>
       <FAQ/>
     </main>
   );

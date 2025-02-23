@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function NewsItem () {
+export default function NewsListItem () {
   return (
     <div
       className="w-full h-48 bg-black/40 px-5 py-3 rounded-xl flex-col justify-between items-start inline-flex relative">

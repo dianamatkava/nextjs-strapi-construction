@@ -1,21 +1,19 @@
-import ServicePageDescription from "@/app/ui/Services/ServicePageDescription";
 import Collaborators from "@/app/ui/Components/Collaborators";
 import ContentImageBlock from "@/app/ui/Containers/ContentImageBlock";
 import ChooseUs from "@/app/ui/Steps/ChooseUs";
-import StepByStepGuide from "@/app/ui/Steps/StepByStepGuide";
 import FAQ from "@/app/ui/FAQ/FAQ";
-import ContactUsBlock from "@/app/ui/ContactUs/ContactUsBlock";
+import AboutUs from "@/app/ui/AboutMe/AboutUs";
+import GetInTouch from "@/app/ui/ContactUs/GetInTouch";
 
 export default function Page () {
   return (
     <div className={'w-full flex flex-col gap-12'}>
-      <ServicePageDescription/>
+      <AboutUs/>
       <Collaborators/>
-      <ContentImageBlock/>
       <ChooseUs/>
       <ContentImageBlock/>
-      <StepByStepGuide/>
-      <ContactUsBlock/>
+      {/*<ContactUsBlock/>*/}
+      <GetInTouch/>
       <FAQ/>
     </div>
   )

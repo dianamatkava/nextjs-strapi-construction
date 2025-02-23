@@ -12,7 +12,7 @@ import GetInTouch from "@/app/ui/ContactUs/GetInTouch";
 export default function ContactUs () {
   return (
     <div className="w-full h-full inline-flex justify-center items-start gap-5">
-      <div className="w-full h-full hidden sm:flex flex-col justify-end items-center gap-5 pt-5">
+      <div className="w-full h-full hidden sm:flex flex-col justify-end items-center gap-5 pt-12">
         <GetInTouch/>
       </div>
       <div className="w-full max-w-[500px] h-full justify-center items-start gap-8 flex flex-col">

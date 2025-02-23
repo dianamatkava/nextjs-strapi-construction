@@ -5,14 +5,13 @@ import React from "react";
 import HeaderH1 from "@/app/ui/Components/HeaderH1";
 import AchievementItem from "@/app/ui/Components/AchievementItem";
 
-export default function AboutMe() {
+export default function AboutUs() {
   return (
     <div className="w-full full justify-center items-center gap-8 flex flex-col">
       <div className="w-full full justify-center items-center gap-8 inline-flex">
         <div className="w-full sm:w-1/2 h-fit flex-col justify-start items-start gap-5 inline-flex">
           <div className="self-stretch h-fit flex-col justify-between items-start flex gap-10">
             <div className="self-stretch h-fit flex-col justify-start items-start gap-4 flex">
-              <SectionHeader name={"About Me"}/>
               <HeaderH1 id={'about'} title={'Professional Handyman providing reliable repair services'}
                         className={'justify-start items-center text-start'}/>
               <div className="w-full text-black text-sm font-normal font-['Plus Jakarta Sans'] tracking-tight">Contrary

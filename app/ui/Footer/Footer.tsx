@@ -6,6 +6,7 @@ import Logo from "@/app/ui/Components/Logo";
 import {FaFacebookF} from "react-icons/fa";
 import CTAPrimary from "@/app/ui/Components/CTAPrimary";
 import Image from "next/image";
+import CTAGroup from "@/app/ui/Components/CTAGroup";
 
 export default function Footer () {
   return (
@@ -18,12 +19,17 @@ export default function Footer () {
         style={{objectFit: 'cover'}}
         className="absolute inset-0 -z-10 rounded-[inherit]"
       />
-      <div className="self-stretch flex-col justify-start items-center gap-6 flex">
+      <div className="self-stretch flex-col justify-start items-center gap-8 flex">
         <div
           className="w-full max-w-[700px] px-5 text-center text-white text-5xl font-normal leading-18">Get
           comprehensive Solution for Repair Services
         </div>
-        <CTAPrimary title={'Contact'} className={'bg-bgDarkPrimary text-black'}/>
+        <CTAGroup primaryButtonLink={'/contact'} primaryButtonStyle={'bg-bgDarkPrimary text-black'} secondaryButtonStyle={'text-white border-white'}>
+          <div
+            className="text-center text-[#e4e4e4] text-sm font-medium font-['Plus Jakarta Sans']">Available
+            24/7
+          </div>
+        </CTAGroup>
       </div>
       <div
         className="self-stretch px-5 md:px-10 sm:px-20 flex-col justify-between items-start flex text-md">
@@ -70,9 +76,9 @@ export default function Footer () {
               <div className="flex-col justify-start items-start inline-flex gap-4 sm:gap-4">
                 <div className="self-stretch text-white text-md font-bold">Links<br/></div>
                 <div className="grow shrink basis-0 flex-col justify-start items-start gap-2.5 flex">
-                  <Link href='/#about'
+                  <Link href='/about'
                         className="w-fit text-[#f5efe7] text-sm cursor-pointer hover:text-[#828181]">About Us</Link>
-                  <Link href='/#contact'
+                  <Link href='/contact'
                         className="w-fit text-[#f5efe7] text-sm cursor-pointer hover:text-[#828181]">Contact
                     Us</Link>
                 </div>

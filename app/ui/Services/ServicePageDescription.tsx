@@ -16,7 +16,7 @@ export default function ServicePageDescription () {
             process is designed to prevent mold growth and secondary damage, ensuring an eco-friendly
           </div>
         </div>
-        <CTAGroup primaryButtonStyle={'bg-bgPrimary text-white'} secondaryButtonStyle={'text-black border-black border-[1.5px]'}>
+        <CTAGroup primaryButtonLink={'/contact'} primaryButtonStyle={'bg-bgPrimary text-white'} secondaryButtonStyle={'text-black border-black border-[1.5px]'}>
           <div className="w-fit h-full flex-col justify-center items-start gap-1 inline-flex">
             <div
               className="self-stretch text-black text-sm font-semibold font-['Plus Jakarta Sans']">Contact

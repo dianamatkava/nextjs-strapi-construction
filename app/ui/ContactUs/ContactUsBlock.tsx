@@ -15,7 +15,7 @@ export default function ContactUsBlock () {
         <div
           className="w-fit text-neutral-100 text-3xl font-semibold font-['Plus Jakarta Sans'] leading-10">We
           remain available 24/7 by phone<br/></div>
-        <CTAGroup primaryButtonStyle={'bg-bgDarkPrimary text-black'} secondaryButtonStyle={'text-white border-white'}>
+        <CTAGroup primaryButtonLink={'/contact'} primaryButtonStyle={'bg-bgDarkPrimary text-black'} secondaryButtonStyle={'text-white border-white'}>
         <div className="w-fit h-full flex-col justify-center items-start gap-1 inline-flex">
           <div
             className="self-stretch text-white text-sm font-semibold font-['Plus Jakarta Sans']">Contact

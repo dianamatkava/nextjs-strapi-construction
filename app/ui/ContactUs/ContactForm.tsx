@@ -64,7 +64,7 @@ export default function ContactForm () {
       <TextArea name={'message'} label={'Enter your message'} placeholder={'Enter your message'} isRequired={false}>
         <LuMessageCircleMore size={18}/>
       </TextArea>
-      <CTAPrimary title={'Submit'} className={'text-white bg-bgPrimary'}/>
+      <CTAPrimary title={'Submit'} className={'text-white bg-bgPrimary'} link={''}/>
     </form>
   )
 }

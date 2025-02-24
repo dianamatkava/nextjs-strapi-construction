@@ -32,6 +32,7 @@ const config: Config = {
       colors: {
         bgCover: '#010c11',
         bgPrimary: '#373940',
+        textHoverOnDark: '#bbbec7',
         bgDarkPrimary: '#e4e4e4',
         primary: '#000000',
         darkPrimary: '#e4e4e4',

@@ -1,6 +1,8 @@
+import Link from "next/link";
+
 export default function Logo () {
   return (
-    <div className="w-full h-fit justify-center items-center inline-flex">
+    <Link href={'/'} className="w-full h-fit justify-center items-center inline-flex cursor-pointer">
       <div className="w-[50px] h-[38px] relative">
         <div className="w-[38px] h-[38px] left-0 top-0 absolute bg-white rounded-full"/>
         <div data-svg-wrapper className="left-0.5 top-0.5 absolute">
@@ -21,6 +23,6 @@ export default function Logo () {
           className="w-1.5 h-1.5 right-3 top-5 absolute origin-top-left rotate-[13.91deg] bg-[#373940] rounded-full border border-white"/>
       </div>
       <div className="text-sm font-normal font-['Anta']">Otter Water</div>
-    </div>
+    </Link>
   )
 }

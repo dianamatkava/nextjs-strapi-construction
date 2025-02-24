@@ -1,5 +1,4 @@
 import CTAGroup from "@/app/ui/Components/CTAGroup";
-import SectionHeader from "@/app/ui/Components/SectionHeader";
 import ImageContainer from "@/app/ui/Components/ImageContainer";
 import React from "react";
 import HeaderH1 from "@/app/ui/Components/HeaderH1";
@@ -30,7 +29,7 @@ export default function AboutUs() {
               </div>
               <ImageContainer src={"/Contract.jpg"} alt={"/Contract.jpg"} className={"block w-full h-[250px] sm:hidden"}/>
             </div>
-            <CTAGroup primaryButtonStyle={'bg-bgPrimary text-white'} secondaryButtonStyle={'text-black border-black border-[1.5px]'}>
+            <CTAGroup primaryButtonLink={'/contact'} primaryButtonStyle={'bg-bgPrimary text-white'} secondaryButtonStyle={'text-black border-black border-[1.5px]'}>
               <div className="w-fit h-full flex-col justify-center items-start gap-1 inline-flex">
                 <div
                   className="self-stretch text-black text-sm font-semibold font-['Plus Jakarta Sans']">Contact

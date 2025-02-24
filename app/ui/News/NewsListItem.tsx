@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function NewsListItem () {
   return (
@@ -17,9 +18,9 @@ export default function NewsListItem () {
           Remodeling
         </div>
       </div>
-      <div className="flex-col justify-start items-start gap-2.5 flex">
+      <Link href={'/news'} className="flex-col justify-start items-start gap-2.5 flex">
         <div
-          className="self-stretch text-white text-lg font-medium font-['Plus Jakarta Sans']">Lorem
+          className="self-stretch text-white text-lg font-medium font-['Plus Jakarta Sans'] leading-6 cursor-pointer hover:text-textHoverOnDark">Lorem
           ipsum is a dummy or placeholder text commonly
         </div>
         <div className="justify-center items-center gap-[5px] inline-flex">
@@ -33,7 +34,7 @@ export default function NewsListItem () {
             AM
           </div>
         </div>
-      </div>
+      </Link>
     </div>
   )
 }

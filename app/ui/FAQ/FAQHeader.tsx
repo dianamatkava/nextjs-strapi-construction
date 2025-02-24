@@ -19,7 +19,7 @@ export default function FAQHeader () {
             </div>
           </InputLineField>
         </form>
-        <CTAPrimary title={'Submit'} className={'text-white bg-bgPrimary'}/>
+        <CTAPrimary title={'Submit'} className={'text-white bg-bgPrimary'} link={''}/>
       </div>
     </div>
 )

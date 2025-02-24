@@ -3,6 +3,7 @@ import ImageContainer from "@/app/ui/Components/ImageContainer";
 import React from "react";
 import HeaderH1 from "@/app/ui/Components/HeaderH1";
 import AchievementItem from "@/app/ui/Components/AchievementItem";
+import AnimatedImage from "@/app/ui/Components/AnimatedImage";
 
 export default function AboutUs() {
   return (
@@ -43,7 +44,9 @@ export default function AboutUs() {
             </CTAGroup>
           </div>
         </div>
-        <ImageContainer src={"/Contract.jpg"} alt={"/Contract.jpg"} className={"hidden w-1/2 sm:block"}/>
+        <div className="hidden w-1/2 sm:block relative">
+          <AnimatedImage src={"/Contract.jpg"} alt={"/Contract.jpg"}/>
+        </div>
       </div>
     </div>
   )

@@ -16,7 +16,7 @@ import NationwideLogo from '@/app/assets/svg/Nationwide.svg';
 export default function Collaborators() {
   return (
     <div className="w-full h-fit flex flex-col justify-center items-center gap-0">
-      <div className="max-w-[500px] text-[#595959] text-sm font-normal font-['Plus Jakarta Sans'] leading-[30px]">
+      <div className="max-w-[500px] text-[#595959] text-center text-sm font-normal font-['Plus Jakarta Sans'] leading-[25px]">
         We collaborate with +120 insurance companies around USA
       </div>
       <div className="w-full h-14 justify-start items-center gap-4 inline-flex overflow-hidden">

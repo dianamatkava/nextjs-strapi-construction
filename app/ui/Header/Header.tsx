@@ -22,10 +22,10 @@ export default function Header({ primaryColor = 'white' }: { primaryColor?: stri
 
 
   return (
-    <div className={`w-full h-fit justify-between inline-flex text-sm ${textColorClass} px-8`}>
+    <div className={`w-full h-fit justify-between inline-flex text-sm ${textColorClass} sm:px-8`}>
       <div className="w-full h-fit p-5 pb-3 flex-col justify-between items-start inline-flex">
         <div className="w-full inline-flex">
-          <div className="w-full inline-flex items-center">
+          <div className="hidden w-full sm:inline-flex items-center">
             <div className={`p-1.5 items-center cursor-pointer ${textColorClass} hover:text-textHoverOnDark`}>
               <FaInstagram size={15}/>
             </div>
@@ -42,7 +42,7 @@ export default function Header({ primaryColor = 'white' }: { primaryColor?: stri
           <div className="w-full inline-flex justify-start items-center">
             <Logo/>
           </div>
-          <div className="w-full inline-flex justify-end items-start gap-8">
+          <div className="hidden w-full sm:inline-flex justify-end items-start gap-8">
             {headerRoutes.map((route, index) => (
               <Link key={index} href={route.path} className='pt-4 flex-col justify-start items-center gap-2 inline-flex relative'>
                 {route.path === pathname ? (

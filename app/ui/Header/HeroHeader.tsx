@@ -17,7 +17,7 @@ export default function HeroHeader () {
         className="absolute inset-0 -z-10 rounded-[inherit]"
       />
       <Header/>
-      <div className="w-full h-fit flex-col justify-center items-center inline-flex gap-8 py-20 sm:mt-[-0px]">
+      <div className="w-full h-fit flex-col justify-center items-center inline-flex gap-8 py-10 sm:py-20 sm:mt-[-0px]">
         <div className="max-w-[800px] h-fit flex-col justify-start items-center gap-8 flex">
           <div className="self-stretch flex-col justify-center items-center gap-8 sm:gap-12 flex">
             <div className="self-stretch flex-col justify-center items-center gap-12 flex">

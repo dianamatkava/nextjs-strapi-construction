@@ -10,7 +10,7 @@ import CTAGroup from "@/app/ui/Components/CTAGroup";
 export default function Footer () {
   return (
     <div
-      className="bg-[#0e1518]/85 relative w-[calc(100%-2rem)] mx-4 pt-[62px] from-black via-black to-black rounded-tl-3xl rounded-tr-3xl flex-col justify-start items-center gap-3 inline-flex font-['Plus Jakarta Sans']">
+      className="bg-[#0e1518]/85 relative w-full sm:w-[calc(100%-2rem)] from-black via-black to-black m-0 sm:mx-4 sm:pt-[62px] sm:rounded-tl-3xl sm:rounded-tr-3xl flex-col justify-start items-center gap-3 inline-flex font-['Plus Jakarta Sans']">
       <Image
         src="/Header.jpg"
         alt="Header Background"
@@ -18,7 +18,7 @@ export default function Footer () {
         style={{objectFit: 'cover'}}
         className="absolute inset-0 -z-10 rounded-[inherit]"
       />
-      <div className="self-stretch flex-col justify-start items-center gap-8 flex">
+      <div className="self-stretch flex-col justify-start items-center gap-8 hidden sm:flex">
         <div
           className="w-full max-w-[700px] px-5 text-center text-white text-5xl font-normal leading-18">Get
           comprehensive Solution for Repair Services
@@ -31,7 +31,7 @@ export default function Footer () {
         </CTAGroup>
       </div>
       <div
-        className="self-stretch px-5 md:px-10 sm:px-20 flex-col justify-between items-start flex text-md">
+        className="w-full self-stretch px-5 md:px-10 sm:px-20 flex-col justify-between items-start flex text-md">
         <div
           className="self-stretch grow shrink basis-0 pt-2.5 pb-10 border-b border-black justify-between items-start inline-flex flex-wrap">
           <div className="justify-start items-center gap-6 sm:gap-12 flex flex-wrap">
@@ -84,22 +84,22 @@ export default function Footer () {
               </div>
             </div>
           </div>
-          <div className="self-stretch w-1/4 py-[25px] flex-col justify-start items-start gap-4 sm:gap-8 inline-flex">
+          <div className="self-stretch w-1/4 py-[25px] flex-col justify-start items-start gap-4 sm:gap-8 hidden sm:inline-flex">
             <div className="text-white text-md font-bold text-nowrap">Lets get Started</div>
             <SubscribeForm/>
           </div>
         </div>
         <div
-          className="self-stretch pt-4 pb-2.5 border-t border-neutral-700 justify-between items-start inline-flex text-sm">
-          <div className="text-[#e2e2e2] text-xs font-normal cursor-pointer hover:text-[#f5efe7] w-1/2">© 2025 All
+          className="w-full inline-flex pt-4 pb-2.5 border-t border-neutral-700 justify-between items-start text-sm">
+          <div className="text-[#e2e2e2] text-nowrap text-xs font-normal cursor-pointer hover:text-[#f5efe7]">© 2025 All
             Rights Reserved
           </div>
-          <div className={'inline-flex gap-1 w-fit'}>
+          <div className={'inline-flex gap-1 w-full justify-end'}>
             <Link href='/privacypolicy'
-                  className="text-nowrap text-xs text-[#e2e2e2] font-normal cursor-pointer hover:text-[#f5efe7] w-1/2 text-end">Privacy
+                  className="text-nowrap text-xs text-[#e2e2e2] font-normal cursor-pointer hover:text-[#f5efe7] w-fit text-end">Privacy
               Policy</Link><span className="text-[#e2e2e2] font-normal">|</span>
             <Link href='/termsofuse'
-                  className="text-nowrap text-xs text-[#e2e2e2] font-normal cursor-pointer hover:text-[#f5efe7] w-1/2 text-end">Terms
+                  className="text-nowrap text-xs text-[#e2e2e2] font-normal cursor-pointer hover:text-[#f5efe7] w-fit text-end">Terms
               of Service</Link>
           </div>
         </div>

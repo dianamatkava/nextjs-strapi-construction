@@ -30,12 +30,12 @@ export default function FAQ() {
 
   return (
     <div className="w-full flex flex-col justify-center items-start gap-5 py-8">
-      <div className="w-full inline-flex justify-between items-center gap-24">
-        <div className={'w-3/5 max-w-[500px] flex flex-col justify-start items-start text-start gap-4'}>
+      <div className="w-full flex flex-col justify-between items-start sm:items-center gap-8 sm:gap-24 md:gap-24 sm:inline-flex sm:flex-row">
+        <div className={'w-full sm:w-3/5 max-w-[500px] flex flex-col justify-start items-start text-start gap-4'}>
           <SectionHeader name={'FAQ'}/>
           <FAQHeader/>
         </div>
-        <div className="w-3/5 h-fit max-w-[700px] flex-col justify-center items-center gap-2.5 inline-flex font-['Plus Jakarta Sans']">
+        <div className="sm:w-3/5 h-fit w-full sm:max-w-[700px] flex-col justify-center items-center gap-2.5 font-['Plus Jakarta Sans']">
           {data.map((item, index) => {
             return (
               <FAQQuestion

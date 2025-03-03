@@ -4,7 +4,6 @@ import Link from "next/link";
 import SubscribeForm from "@/app/ui/ContactUs/SubscribeForm";
 import Logo from "@/app/ui/Components/Logo";
 import {FaFacebookF} from "react-icons/fa";
-import CTAPrimary from "@/app/ui/Components/CTAPrimary";
 import Image from "next/image";
 import CTAGroup from "@/app/ui/Components/CTAGroup";
 
@@ -66,7 +65,7 @@ export default function Footer () {
                   {Array.from({length: 5}).map((_, index) => (
                     <Link
                       key={index}
-                      href={`#services`}
+                      href={`/#services`}
                       className="w-fit text-[#f5efe7] text-sm cursor-pointer hover:text-[#828181]">
                       House Remodeling
                     </Link>

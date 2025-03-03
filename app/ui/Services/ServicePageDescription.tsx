@@ -6,7 +6,7 @@ import ImageContainer from "@/app/ui/Components/ImageContainer";
 export default function ServicePageDescription () {
   return (
     <div className="w-full justify-start items-center gap-12 inline-flex relative">
-      <div className="w-1/2 flex-col justify-start items-start gap-8 inline-flex">
+      <div className="w-1/2 pr-4 flex-col justify-start items-start gap-8 inline-flex">
         <div className="self-stretch flex-col justify-start items-start gap-4 flex">
           <HeaderH1 title={'Water Damage Restoration'} className={'text-start'}/>
           <div
@@ -29,7 +29,7 @@ export default function ServicePageDescription () {
           </div>
         </CTAGroup>
       </div>
-      <ImageContainer src={"/Contract.jpg"} alt={"/Contract.jpg"} className={"hidden w-1/2 sm:block h-[300px]"}/>
+      <ImageContainer src={"/Contract.jpg"} alt={"/Contract.jpg"} className={"hidden !w-1/2 sm:block h-[300px]"}/>
     </div>
   );
 }

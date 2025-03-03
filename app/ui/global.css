@@ -6,6 +6,13 @@ html {
   scroll-behavior: smooth;
 }
 
+html {
+  --cursor-color: #333
+}
+
+html.dark-mode {
+  --cursor-color: #fff
+}
 
 @layer base {
   textarea {

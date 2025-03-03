@@ -9,41 +9,33 @@ const data = [
   {
     'id': 1,
     'question': 'If there are question we will answer all you question?',
-    'answer': 'Water damage\n' +
-      '            restoration following a flood is no small or easy task, which is why hiring a company with a good reputation\n' +
-      '            and vast history of successful flood damage restorations is a must. At otterwater.io.',
+    'answer': 'If there are question you want to ask. We will answer all you question. want to ask. We will answer all you question.',
   },{
     'id': 2,
     'question': 'If there are question we will answer all you question?',
-    'answer': 'Water damage\n' +
-      '            restoration following a flood is no small or easy task, which is why hiring a company with a good reputation\n' +
-      '            and vast history of successful flood damage restorations is a must. At otterwater.io.',
+    'answer': 'If there are question you want to ask. We will answer all you question. want to ask. We will answer all you question.',
   },{
     'id': 3,
     'question': 'If there are question we will answer all you question?',
-    'answer': 'Water damage\n' +
-      '            restoration following a flood is no small or easy task, which is why hiring a company with a good reputation\n' +
-      '            and vast history of successful flood damage restorations is a must. At otterwater.io.',
+    'answer': 'If there are question you want to ask. We will answer all you question. want to ask. We will answer all you question.',
   },{
     'id': 4,
     'question': 'If there are question we will answer all you question?',
-    'answer': 'Water damage\n' +
-      '            restoration following a flood is no small or easy task, which is why hiring a company with a good reputation\n' +
-      '            and vast history of successful flood damage restorations is a must. At otterwater.io.',
+    'answer': 'If there are question you want to ask. We will answer all you question. want to ask. We will answer all you question.',
   },
 ]
 
 export default function FAQ() {
-  const [isOpen, setIsOpen] = useState<null|number>(null)
+  const [openedFAQ, setOpenedFAQ] = useState<null|number>(null)
 
   return (
     <div className="w-full flex flex-col justify-center items-start gap-5 py-8">
-      <div className="w-full inline-flex justify-between items-start gap-24">
+      <div className="w-full inline-flex justify-between items-center gap-24">
         <div className={'w-3/5 max-w-[500px] flex flex-col justify-start items-start text-start gap-4'}>
           <SectionHeader name={'FAQ'}/>
           <FAQHeader/>
         </div>
-        <div className="w-3/5 h-fit max-w-[700px] flex-col justify-center items-end gap-2.5 inline-flex font-['Plus Jakarta Sans']">
+        <div className="w-3/5 h-fit max-w-[700px] flex-col justify-center items-center gap-2.5 inline-flex font-['Plus Jakarta Sans']">
           {data.map((item, index) => {
             return (
               <FAQQuestion
@@ -51,8 +43,8 @@ export default function FAQ() {
                 id={item.id}
                 question={item.question}
                 answer={item.answer}
-                isOpen={isOpen}
-                setIsOpen={setIsOpen}/>
+                isOpen={openedFAQ === item.id}
+                setIsOpen={setOpenedFAQ}/>
             )
           })}
         </div>

@@ -1,14 +1,23 @@
 import { FaAngleDown } from "react-icons/fa6";
+import { FaAngleUp } from "react-icons/fa6";
 
 
 export default function FAQQuestion ({id, question, answer, isOpen, setIsOpen}: {id: number, question: string, answer: string, isOpen, setIsOpen}) {
   return (
     <div
-      className="w-full py-3 px-1 border-b border-[#e1e1eb] justify-between items-start gap-2.5 inline-flex">
-      <div className="text-black text-md">
-        If there are question we will answer all you question?
+      className="w-full flex flex-col py-3 px-1 border-b border-[#e1e1eb] justify-center items-start gap-3">
+      <div
+        className="w-full justify-between items-center gap-4 inline-flex">
+        <div className={`"text-black text-md " + ${isOpen && "font-bold"}`}>{question}</div>
+        {isOpen ? (
+          <div className={'p-4 w-fit flex text-gray-600'} onClick={() => setIsOpen(null)}><FaAngleUp size={16}/></div>
+          ):
+          <div className={'p-4 w-fit flex cursor-pointer hover:text-gray-400'} onClick={() => setIsOpen(id)}><FaAngleDown size={16}/></div>
+        }
       </div>
-      <FaAngleDown size={16}/>
+      {isOpen && (
+        <div className="text-sm text-gray-600">{answer}</div>
+        )}
     </div>
   )
 }

@@ -19,7 +19,7 @@ export default function ServiceListItem(
         <div
           className="w-full h-fit py-5 flex-col justify-center items-start inline-flex">
           <Link href={'/services'}
-            className={`w-full text-black text-xlg font-['Plus Jakarta Sans'] tracking-tight hover:text-textHoverOnDark ` + `${isActive ? '!font-bold' : null}`}>{title}</Link>
+            className={`w-full text-black text-xlg font-['Plus Jakarta Sans'] tracking-tight hover:underline ` + `${isActive ? '!font-bold' : null}`}>{title}</Link>
         </div>
       </div>
       <AnimatePresence>

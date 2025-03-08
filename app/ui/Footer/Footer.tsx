@@ -10,7 +10,7 @@ import CTAGroup from "@/app/ui/Components/CTAGroup";
 export default function Footer () {
   return (
     <div
-      className="bg-[#0e1518]/85 relative w-full sm:w-[calc(100%-2rem)] from-black via-black to-black m-0 sm:mx-4 sm:pt-[62px] sm:rounded-tl-3xl sm:rounded-tr-3xl flex-col justify-start items-center gap-3 inline-flex font-['Plus Jakarta Sans']">
+      className="h-full bg-[#0e1518]/85 relative w-full sm:w-[calc(100%-2rem)] from-black via-black to-black m-0 sm:mx-4 sm:pt-[62px] sm:rounded-tl-3xl sm:rounded-tr-3xl flex-col justify-start items-center gap-3 inline-flex font-['Plus Jakarta Sans']">
       <Image
         src="/Header.jpg"
         alt="Header Background"
@@ -31,14 +31,14 @@ export default function Footer () {
         </CTAGroup>
       </div>
       <div
-        className="w-full self-stretch px-5 md:px-10 sm:px-20 flex-col justify-between items-start flex text-md">
+        className="w-full h-full self-stretch px-5 md:px-10 md:px-20 flex-col justify-between items-start flex text-md">
         <div
           className="self-stretch grow shrink basis-0 pt-2.5 pb-10 border-b border-black justify-between items-start inline-flex flex-wrap">
-          <div className="justify-start items-center gap-6 sm:gap-12 flex flex-wrap">
-            <div className="flex-col w-[350px] justify-start items-start gap-8 inline-flex">
+          <div className="w-fit justify-start items-center gap-6 sm:gap-12 flex flex-col sm:flex-row">
+            <div className="flex-col sm:w-[350px] justify-start items-start gap-8 inline-flex">
               <div className="flex-col justify-start items-start text-[#828181] gap-4 inline-flex pt-5">
                 <Logo/>
-                <div className="text-[#f5efe7] text-sm">
+                <div className="text-gray-400 text-sm">
                   As a group of companies, we offer a wide range of water restoration, leak detection, mold remediation and reconstruction services, including residential. and reconstruction services and reconstruction services, including residential. and reconstruction services
                 </div>
               </div>
@@ -58,7 +58,7 @@ export default function Footer () {
                 </div>
               </div>
             </div>
-            <div className="flex justify-start items-start gap-16 w-fit">
+            <div className="flex justify-start items-start gap-12 md:gap-16 w-full sm:w-fit">
               <div className="flex-col justify-start items-start gap-4 sm:gap-4 inline-flex">
                 <div className="self-stretch text-white text-md font-bold text-nowrap">Services</div>
                 <div className="grow shrink basis-0 flex-col justify-start items-start gap-2.5 flex">
@@ -84,17 +84,17 @@ export default function Footer () {
               </div>
             </div>
           </div>
-          <div className="self-stretch w-1/4 py-[25px] flex-col justify-start items-start gap-4 sm:gap-8 hidden sm:inline-flex">
+          <div className="self-stretch w-1/4 py-[25px] flex-col justify-start items-start gap-4 sm:gap-8 hidden lg:inline-flex">
             <div className="text-white text-md font-bold text-nowrap">Lets get Started</div>
             <SubscribeForm/>
           </div>
         </div>
         <div
-          className="w-full inline-flex pt-4 pb-2.5 border-t border-neutral-700 justify-between items-start text-sm">
+          className="w-full inline-flex pt-4 pb-2.5 border-t border-neutral-700 justify-between items-center text-sm">
           <div className="text-[#e2e2e2] text-nowrap text-xs font-normal cursor-pointer hover:text-[#f5efe7]">© 2025 All
             Rights Reserved
           </div>
-          <div className={'inline-flex gap-1 w-full justify-end'}>
+          <div className={'w-fit inline-flex gap-1 justify-end flex-wrap'}>
             <Link href='/privacypolicy'
                   className="text-nowrap text-xs text-[#e2e2e2] font-normal cursor-pointer hover:text-[#f5efe7] w-fit text-end">Privacy
               Policy</Link><span className="text-[#e2e2e2] font-normal">|</span>

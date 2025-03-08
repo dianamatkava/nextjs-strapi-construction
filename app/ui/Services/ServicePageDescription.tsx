@@ -6,9 +6,9 @@ import ImageContainer from "@/app/ui/Components/ImageContainer";
 export default function ServicePageDescription () {
   return (
     <div className="w-full justify-start items-center gap-12 inline-flex relative">
-      <div className="w-1/2 pr-4 flex-col justify-start items-start gap-8 inline-flex">
+      <div className="w-full sm:w-1/2 pr-4 flex-col justify-start items-start gap-8 inline-flex">
         <div className="self-stretch flex-col justify-start items-start gap-4 flex">
-          <HeaderH1 title={'Water Damage Restoration'} className={'text-start'}/>
+          <HeaderH1 title={'Water Damage Restoration'} className={'sm:text-start text-center'}/>
           <div
             className="self-stretch text-black text-sm font-normal font-['Plus Jakarta Sans']">Otterwater®
             Water Damage Restoration delivers Rapid Recovery, Reliable Results™—restoring your home safely and swiftly

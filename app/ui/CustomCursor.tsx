@@ -1,43 +1,35 @@
-"use client"
-import React, { useState, useEffect } from 'react';
+'use client'
+import { useState, useEffect } from "react";
+import AnimatedCursor from "react-animated-cursor";
 
-const CustomCursor = () => {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-  const [visible, setVisible] = useState(true); // Adjust visibility if needed
+export default function CustomCursor() {
+  const [enableCursor, setEnableCursor] = useState(false);
 
   useEffect(() => {
-    // Update the cursor position on mouse move
-    const moveCursor = (e) => {
-      setPosition({ x: e.clientX, y: e.clientY });
+    const checkDevice = () => {
+      const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
+      setEnableCursor(!isTouchDevice && window.innerWidth >= 1024);
     };
 
-    window.addEventListener('mousemove', moveCursor);
-    return () => {
-      window.removeEventListener('mousemove', moveCursor);
-    };
+    checkDevice();
+    window.addEventListener("resize", checkDevice);
+
+    return () => window.removeEventListener("resize", checkDevice);
   }, []);
 
-  // You can toggle `visible` based on additional logic if required
-  const cursorStyle = {
-    width: '8px',
-    height: '8px',
-    zIndex: 9999, // High z-index to ensure it's on top
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    position: 'fixed',
-    borderRadius: '50%',
-    pointerEvents: 'none',
-    transform: 'translate(-50%, -50%)',
-    transition: 'opacity 0.15s ease-in-out, height 0.2s ease-in-out, width 0.2s ease-in-out',
-    opacity: visible ? 1 : 0,
-    top: position.y,
-    left: position.x,
-    mixBlendMode: 'difference',
-    backgroundColor: '#000000'
-  };
-
-  return <div style={cursorStyle} />;
-};
-
-export default CustomCursor;
+  return enableCursor ? (
+    <AnimatedCursor
+      innerSize={8}
+      outerSize={35}
+      innerScale={1}
+      outerScale={1.7}
+      outerAlpha={0}
+      outerStyle={{
+        border: "2px solid var(--cursor-color)",
+      }}
+      innerStyle={{
+        backgroundColor: "var(--cursor-color)",
+      }}
+    />
+  ) : null;
+}

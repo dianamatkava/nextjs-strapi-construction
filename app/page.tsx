@@ -19,7 +19,7 @@ export default function Page() {
       <Testimonial/>
       <ChooseUs/>
       <div className='w-full flex flex-col gap-1'>
-        <SectionHeader name={"About Me"}/>
+        <SectionHeader name={"About Us"}/>
         <AboutUs/>
       </div>
       <StepByStepGuide/>

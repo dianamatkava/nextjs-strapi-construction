@@ -12,9 +12,9 @@ export default function ContentImageBlock ({title, description, contentText, img
           provide you with a comprehensive assessment of water damages.
         </div>
       </div>
-      <div className="w-full self-stretch justify-between items-center inline-flex gap-8">
-        <ImageContainer src={"/Contract.jpg"} alt={"/Contract.jpg"} className={"hidden !w-1/2 sm:block h-[220px]"}/>
-        <div className="w-1/2 flex px-4 flex-col text-black text-sm font-normal font-['Plus Jakarta Sans'] gap-3">
+      <div className="w-full self-stretch justify-between items-center flex flex-col sm:flex-row gap-8">
+        <ImageContainer src={"/Contract.jpg"} alt={"/Contract.jpg"} className={"w-full sm:!w-1/2 !h-[180px] sm:h-[220px]"}/>
+        <div className="w-full sm:w-1/2 flex px-4 flex-col text-black text-sm font-normal font-['Plus Jakarta Sans'] gap-3">
           <div className="w-full">
             Water damage restoration following a flood is no small or easy task, which is why hiring a company with a good reputation
           and vast history of successful flood damage restorations is a must. At otterwater.io, we hire the finest

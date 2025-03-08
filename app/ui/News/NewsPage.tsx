@@ -6,11 +6,11 @@ export default function NewsPage () {
   return (
     <div className={'w-full flex flex-col items-center justify-center gap-16'}>
       <NewsPageHeader/>
-      <div className={'w-full inline-flex items-start justify-between gap-12 px-16'}>
-        <div className={'w-1/5 flex flex-col items-center justify-center gap-8'}>
+      <div className={'w-full inline-flex items-start justify-between gap-12 sm:px-16'}>
+        <div className={'w-1/5 hidden sm:flex flex-col items-center justify-center gap-8'}>
           <NewsPageContentTable/>
         </div>
-        <div className={'w-3/5 flex flex-col items-center justify-center gap-8'}>
+        <div className={'w-full sm:w-3/5 flex flex-col items-center justify-center gap-8'}>
           <NewsPageContentBlock/>
           <NewsPageContentBlock/>
         </div>

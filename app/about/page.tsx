@@ -13,7 +13,6 @@ export default function Page () {
       <ChooseUs/>
       <ContentImageBlock/>
       {/*<ContactUsBlock/>*/}
-      <GetInTouch/>
       <FAQ/>
     </div>
   )

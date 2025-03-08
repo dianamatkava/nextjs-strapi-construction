@@ -4,7 +4,7 @@ import CTAGroup from "@/app/ui/Components/CTAGroup";
 export default function ContactUsBlock () {
   return (
     <div
-      className="w-full h-fit px-5 sm:px-20 py-5 sm:py-14 bg-black/40 rounded-3xl justify-between items-center inline-flex relative">
+      className="hidden md:inline-flex w-full h-fit px-5 sm:px-20 py-5 sm:py-14 bg-black/40 rounded-3xl justify-between items-center relative">
       <Image
         src="/Image1.jpeg"
         alt="Background"

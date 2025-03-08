@@ -2,7 +2,7 @@
 import {motion} from 'framer-motion';
 import ImageContainer from "@/app/ui/Components/ImageContainer";
 
-export default function AnimatedImage({ src, alt }) {
+export default function AnimatedImage({ src, alt, className }) {
   return (
     <motion.div
       className="relative w-full"  // Container must have a defined size
@@ -17,7 +17,7 @@ export default function AnimatedImage({ src, alt }) {
       <ImageContainer
         src={src}
         alt={alt}
-        className="rounded-lg"
+        className={`"rounded-lg " + ${className}`}
       />
     </motion.div>
   );

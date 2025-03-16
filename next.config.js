@@ -7,6 +7,11 @@ const nextConfig = {
         hostname: 'placehold.co',
         pathname: '/**',
       },
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+        pathname: '/**',
+      },
     ],
   },
   webpack(config, { isServer }) {

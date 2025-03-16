@@ -3,62 +3,24 @@ import React, {useEffect, useRef, useState} from "react";
 import ServiceListItem from "@/app/ui/Services/ServiceListItem";
 import Image from "next/image";
 
-const data = [
-  {
-    'id': 1,
-    'title': 'Water Damage Restoration',
-    'description': 'Water damage\n' +
-      '            restoration following a flood is no small or easy task, which is why hiring a company with a good reputation\n' +
-      '            and vast history of successful flood damage restorations is a must. At otterwater.io, we hire the finest\n' +
-      '            reconstruction contractors in all of Sacramento who use their experience and expertise in your water damage\n' +
-      '            cleanup and restoration project. We are your go to water mitigation service in Northern California and\n' +
-      '            Nevada.',
-  }, {
-    'id': 2,
-    'title': 'House Remodeling',
-    'description': 'Water damage\n' +
-      '            restoration following a flood is no small or easy task, which is why hiring a company with a good reputation\n' +
-      '            and vast history of successful flood damage restorations is a must. At otterwater.io, we hire the finest\n' +
-      '            reconstruction contractors in all of Sacramento who use their experience and expertise in your water damage\n' +
-      '            cleanup and restoration project. We are your go to water mitigation service in Northern California and\n' +
-      '            Nevada.',
-  },{
-    'id': 3,
-    'title': 'Plumbing Service',
-    'description': 'Water damage\n' +
-      '            restoration following a flood is no small or easy task, which is why hiring a company with a good reputation\n' +
-      '            and vast history of successful flood damage restorations is a must. At otterwater.io, we hire the finest\n' +
-      '            reconstruction contractors in all of Sacramento who use their experience and expertise in your water damage\n' +
-      '            cleanup and restoration project. We are your go to water mitigation service in Northern California and\n' +
-      '            Nevada.',
-  },{
-    'id': 4,
-    'title': 'Water Damage Restoration',
-    'description': 'Water damage\n' +
-      '            restoration following a flood is no small or easy task, which is why hiring a company with a good reputation\n' +
-      '            and vast history of successful flood damage restorations is a must. At otterwater.io, we hire the finest\n' +
-      '            reconstruction contractors in all of Sacramento who use their experience and expertise in your water damage\n' +
-      '            cleanup and restoration project. We are your go to water mitigation service in Northern California and\n' +
-      '            Nevada.',
-  },{
-    'id': 5,
-    'title': 'Plumbing Service',
-    'description': 'Water damage\n' +
-      '            restoration following a flood is no small or easy task, which is why hiring a company with a good reputation\n' +
-      '            and vast history of successful flood damage restorations is a must. At otterwater.io, we hire the finest\n' +
-      '            reconstruction contractors in all of Sacramento who use their experience and expertise in your water damage\n' +
-      '            cleanup and restoration project. We are your go to water mitigation service in Northern California and\n' +
-      '            Nevada.',
-  },
-]
+const API_URL = process.env.NEXT_PUBLIC_STRAPI_API;
 
-export default function ServiceList() {
+
+export default function ServiceList({data}: ServiceList) {
   const containerRef = useRef(null);
-  const [activeService, setActiveService] = useState(1)
+  const [activeService, setActiveService] = useState<number | null>(
+    data?.[0]?.id ?? null
+  );
   const [isVisible, setIsVisible] = useState(false);
-  const [hoverSelected, setHoverSelected] = useState<null|number>(null);
+  const [hoverSelected, setHoverSelected] = useState<number | null>(null);
 
-    useEffect(() => {
+  const imageData: Service | undefined = Array.isArray(data)
+    ? data.find((e) => Number(e.id) === Number(activeService))
+    : undefined;
+
+  console.log("imageData", `${API_URL}${imageData?.image?.url}`);
+
+  useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
@@ -74,28 +36,31 @@ export default function ServiceList() {
   }, []);
 
   useEffect(() => {
-    console.log(hoverSelected)
     if (hoverSelected) return;
     if (!isVisible) return;
+
     const scrollY = window.scrollY;
     const timeout = setTimeout(() => {
-      const serviceId = ((activeService + 1) % data.length);
-      setActiveService(() => (serviceId === 0 ? data.length : serviceId));
+      if (!Array.isArray(data) || data.length === 0) return;
+
+      const currentIndex = data.findIndex((e) => Number(e.id) === Number(activeService));
+      const nextIndex = (currentIndex + 1) % data.length;
+
+      setActiveService(data[nextIndex]?.id ?? null);
       window.scrollTo(0, scrollY);
     }, 1500);
 
     return () => clearTimeout(timeout);
-  },  [activeService, data.length, isVisible, setActiveService, hoverSelected, setHoverSelected]);
+  }, [activeService, data, isVisible, hoverSelected]);
 
   const onMouseEnterService = (id: number) => {
     setHoverSelected(id);
-    setActiveService(id)
-  };
-  const onMouseLeaveService = () => {
-    console.log('onMouseLeaveService')
-    setHoverSelected(null);
+    setActiveService(id);
   };
 
+  const onMouseLeaveService = () => {
+    setHoverSelected(null);
+  };
 
   return (
     <div ref={containerRef} className="w-full h-fit flex flex-col items-start justify-start gap-12 overflow-hidden relative">
@@ -109,7 +74,7 @@ export default function ServiceList() {
                 id={item.id}
                 number={'0' + index}
                 title={item.title}
-                description={item.description}
+                description={item.previewText}
                 isActive={item.id === activeService}
                 onHoverEnter={onMouseEnterService}
                 onHoverLeave={onMouseLeaveService}
@@ -117,15 +82,17 @@ export default function ServiceList() {
             )
           })}
         </div>
-        <div className="hidden w-2/5 md:block relative p-4 overflow-hidden bg-black rounded-lg">
-          <Image
-            src="/Service1.jpg"
-            alt="Experties"
-            fill
-            style={{objectFit: "cover"}}
-            className="rounded-[inherit]"
-          />
-        </div>
+        {imageData && (
+          <div className="hidden w-2/5 md:block relative p-4 overflow-hidden bg-black rounded-lg">
+            <Image
+              src={`http://localhost:1337${imageData?.image?.url}`}
+              alt={imageData?.image.alternativeText}
+              fill
+              style={{objectFit: "cover"}}
+              className="rounded-[inherit]"
+            />
+          </div>
+        )}
       </div>
     </div>
   );

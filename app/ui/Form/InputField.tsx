@@ -1,4 +1,3 @@
-import { MdOutlineMail } from "react-icons/md";
 import React from "react";
 
 export default function InputField (

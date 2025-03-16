@@ -7,7 +7,7 @@ import {FaFacebookF} from "react-icons/fa";
 import Image from "next/image";
 import CTAGroup from "@/app/ui/Components/CTAGroup";
 
-export default function Footer () {
+export default function Footer ({data}: SiteData) {
   return (
     <div
       className="h-full bg-[#0e1518]/85 relative w-full sm:w-[calc(100%-2rem)] from-black via-black to-black m-0 sm:mx-4 sm:pt-[62px] sm:rounded-tl-3xl sm:rounded-tr-3xl flex-col justify-start items-center gap-3 inline-flex font-['Plus Jakarta Sans']">
@@ -38,9 +38,7 @@ export default function Footer () {
             <div className="flex-col sm:w-[350px] justify-start items-start gap-8 inline-flex">
               <div className="flex-col justify-start items-start text-[#828181] gap-4 inline-flex pt-5">
                 <Logo/>
-                <div className="text-gray-400 text-sm">
-                  As a group of companies, we offer a wide range of water restoration, leak detection, mold remediation and reconstruction services, including residential. and reconstruction services and reconstruction services, including residential. and reconstruction services
-                </div>
+                <div className="text-gray-400 text-sm">{data.siteDescription}</div>
               </div>
               <div className="self-stretch h-[58px] justify-start items-center gap-5 inline-flex">
                 <div className="inline-flex justify-center items-center gap-4">

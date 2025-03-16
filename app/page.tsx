@@ -9,13 +9,31 @@ import FAQ from "@/app/ui/FAQ/FAQ";
 import NewsList from "@/app/ui/News/NewsList";
 import SectionHeader from "@/app/ui/Components/SectionHeader";
 import React from "react";
+import axios from "axios";
 
-export default function Page() {
+const API_URL = process.env.NEXT_PUBLIC_STRAPI_API;
+
+async function getServices() {
+  try {
+    const res = await axios.get(`${API_URL}/services?populate=*`);
+    return res.data.data;
+  } catch (error) {
+    console.error("Failed to fetch global data:", error);
+    return [];
+  }
+}
+
+
+export default async function Page() {
+
+  const services: Service[] = await getServices()
+  console.log(services)
+
   return (
     <main className="w-full h-full flex justify-center items-start min-h-screen flex-col pt-5 px-5 sm:px-16 py-8 gap-16">
       <Collaborators/>
       <ServicePreview/>
-      <ServiceList/>
+      <ServiceList data={services}/>
       <Testimonial/>
       <ChooseUs/>
       <div className='w-full flex flex-col gap-1'>

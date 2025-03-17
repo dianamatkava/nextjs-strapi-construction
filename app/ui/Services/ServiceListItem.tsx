@@ -1,11 +1,24 @@
-import {AnimatePresence, motion} from 'framer-motion';
+import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
 import Link from "next/link";
 
-export default function ServiceListItem(
-  {id, title, number, description, isActive=false, onHoverEnter, onHoverLeave}:
-  {id: number, title: string, number: string, description: string, isActive?: boolean, onHoverEnter, onHoverLeave}
-) {
+export default function ServiceListItem({
+  id,
+  title,
+  number,
+  description,
+  isActive = false,
+  onHoverEnter,
+  onHoverLeave,
+}: {
+  id: number;
+  title: string;
+  number: string;
+  description: string;
+  isActive?: boolean;
+  onHoverEnter: (id: number) => void;
+  onHoverLeave: () => void;
+}) {
   return (
     <div
       className="w-full h-fit flex flex-col items-start justify-start border-b border-black"
@@ -14,17 +27,28 @@ export default function ServiceListItem(
     >
       <div className="w-full inline-flex justify-start items-start gap-1">
         <div
-          className={`text-center text-black text-sm font-['Plus Jakarta Sans'] leading-tight tracking-tight pt-4 ` + `${isActive ? '!font-bold' : null}`}>{number}
+          className={
+            `text-center text-black text-sm font-['Plus Jakarta Sans'] leading-tight tracking-tight pt-4 ` +
+            `${isActive ? "!font-bold" : null}`
+          }
+        >
+          {number}
         </div>
-        <div
-          className="w-full h-fit py-5 flex-col justify-center items-start inline-flex">
+        <div className="w-full h-fit py-5 flex-col justify-center items-start inline-flex">
           {isActive ? (
-            <Link href={'/services'}
-            className={`w-full text-black text-xlg font-bold font-['Plus Jakarta Sans'] tracking-tight hover:underline`}>{title}</Link>
-          ): (
-            <div className={`w-full text-black text-xlg font-['Plus Jakarta Sans'] tracking-tight`}>{title}</div>
+            <Link
+              href={`/services/${id}`}
+              className={`w-full text-black text-xlg font-bold font-['Plus Jakarta Sans'] tracking-tight hover:underline`}
+            >
+              {title}
+            </Link>
+          ) : (
+            <div
+              className={`w-full text-black text-xlg font-['Plus Jakarta Sans'] tracking-tight`}
+            >
+              {title}
+            </div>
           )}
-
         </div>
       </div>
       <AnimatePresence>
@@ -32,10 +56,10 @@ export default function ServiceListItem(
           <motion.div
             key="content"
             layout
-            initial={{opacity: 0, height: 0}}
-            animate={{opacity: 1, height: 'auto'}}
-            exit={{opacity: 0, height: 0}}
-            transition={{duration: 0.3}}
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
             className="overflow-hidden"
           >
             <p className="mt-2 pb-5">{description}</p>

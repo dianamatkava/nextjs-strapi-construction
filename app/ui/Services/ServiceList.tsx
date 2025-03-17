@@ -1,15 +1,13 @@
-"use client"
-import React, {useEffect, useRef, useState} from "react";
-import ServiceListItem from "@/app/ui/Services/ServiceListItem";
+"use client";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import ServiceListItem from "./ServiceListItem";
+import { APP_URL } from "@/app/constants";
 
-const API_URL = process.env.NEXT_PUBLIC_STRAPI_API;
-
-
-export default function ServiceList({data}: ServiceList) {
+export default function ServiceList({ data }: { data: Service[] }) {
   const containerRef = useRef(null);
-  const [activeService, setActiveService] = useState<number | null>(
-    data?.[0]?.id ?? null
+  const [activeService, setActiveService] = useState<number>(
+    Number(data[0].id)
   );
   const [isVisible, setIsVisible] = useState(false);
   const [hoverSelected, setHoverSelected] = useState<number | null>(null);
@@ -17,8 +15,6 @@ export default function ServiceList({data}: ServiceList) {
   const imageData: Service | undefined = Array.isArray(data)
     ? data.find((e) => Number(e.id) === Number(activeService))
     : undefined;
-
-  console.log("imageData", `${API_URL}${imageData?.image?.url}`);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -43,10 +39,12 @@ export default function ServiceList({data}: ServiceList) {
     const timeout = setTimeout(() => {
       if (!Array.isArray(data) || data.length === 0) return;
 
-      const currentIndex = data.findIndex((e) => Number(e.id) === Number(activeService));
+      const currentIndex = data.findIndex(
+        (e) => Number(e.id) === Number(activeService)
+      );
       const nextIndex = (currentIndex + 1) % data.length;
 
-      setActiveService(data[nextIndex]?.id ?? null);
+      setActiveService(Number(data[nextIndex].id));
       window.scrollTo(0, scrollY);
     }, 1500);
 
@@ -63,7 +61,10 @@ export default function ServiceList({data}: ServiceList) {
   };
 
   return (
-    <div ref={containerRef} className="w-full h-fit flex flex-col items-start justify-start gap-12 overflow-hidden relative">
+    <div
+      ref={containerRef}
+      className="w-full h-fit flex flex-col items-start justify-start gap-12 overflow-hidden relative"
+    >
       {/*<ServiceHeader/>*/}
       <div className="w-full flex gap-12 items-stretch">
         <div className="w-full md:w-2/3 max-w-[800px] flex flex-col gap-4">
@@ -71,24 +72,24 @@ export default function ServiceList({data}: ServiceList) {
             return (
               <ServiceListItem
                 key={item.id}
-                id={item.id}
-                number={'0' + index}
+                id={Number(item.id)}
+                number={"0" + index}
                 title={item.title}
-                description={item.previewText}
-                isActive={item.id === activeService}
+                description={item.description}
+                isActive={Number(item.id) === activeService}
                 onHoverEnter={onMouseEnterService}
                 onHoverLeave={onMouseLeaveService}
               />
-            )
+            );
           })}
         </div>
         {imageData && (
           <div className="hidden w-2/5 md:block relative p-4 overflow-hidden bg-black rounded-lg">
             <Image
-              src={`http://localhost:1337${imageData?.image?.url}`}
-              alt={imageData?.image.alternativeText}
+              src={imageData.image}
+              alt="Service Image"
               fill
-              style={{objectFit: "cover"}}
+              style={{ objectFit: "cover" }}
               className="rounded-[inherit]"
             />
           </div>

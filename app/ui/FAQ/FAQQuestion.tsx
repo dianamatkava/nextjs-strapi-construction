@@ -14,24 +14,29 @@ export default function FAQQuestion({
   isOpen: boolean;
   setIsOpen: (id: number | null) => void;
 }) {
+  const toggleFAQ = () => {
+    setIsOpen(isOpen ? null : id);
+  };
+
   return (
     <div className="w-full flex flex-col pt-3 pb-2 px-1 border-b border-[#e1e1eb] justify-center items-start gap-3">
-      <div className="w-full justify-between items-center gap-4 inline-flex">
-        <div className={`"text-black text-md " + ${isOpen && "font-bold"}`}>
+      <div
+        className="w-full justify-between items-center gap-4 inline-flex"
+        onClick={toggleFAQ}
+      >
+        <div
+          className={`"text-black text-md " + ${
+            isOpen ? "font-bold" : "hover:text-gray-500"
+          }`}
+        >
           {question}
         </div>
         {isOpen ? (
-          <div
-            className={"p-4 w-fit flex text-gray-600"}
-            onClick={() => setIsOpen(null)}
-          >
+          <div className={"p-4 w-fit flex text-gray-600"}>
             <FaAngleUp size={16} />
           </div>
         ) : (
-          <div
-            className={"p-4 w-fit flex cursor-pointer hover:text-gray-400"}
-            onClick={() => setIsOpen(id)}
-          >
+          <div className={"p-4 w-fit flex cursor-pointer hover:text-gray-400"}>
             <FaAngleDown size={16} />
           </div>
         )}

@@ -35,8 +35,10 @@ export default async function Page() {
         <AboutUs />
       </div>
       <StepByStepGuide />
-      {/*<ContactUsBlock/>*/}
-      <NewsList />
+      <div className="w-full flex flex-col gap-3">
+        <SectionHeader name={"Articles & News"} />
+        <NewsList />
+      </div>
       <FAQ />
     </main>
   );

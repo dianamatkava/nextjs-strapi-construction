@@ -48,7 +48,7 @@ export default async function ServicePage({
     notFound();
   }
 
-  const betweenComponents = [ChooseUs, StepByStepGuide];
+  const betweenComponents = [ChooseUs, StepByStepGuide, ContactUsBlock];
 
   return (
     <div className={"w-full flex flex-col gap-12"}>
@@ -72,7 +72,6 @@ export default async function ServicePage({
             React.createElement(betweenComponents[idx])}
         </React.Fragment>
       ))}
-      <ContactUsBlock />
       <FAQ />
     </div>
   );

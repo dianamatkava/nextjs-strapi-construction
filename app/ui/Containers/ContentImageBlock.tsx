@@ -11,7 +11,7 @@ export default function ContentImageBlock({
 }: {
   title: string;
   description: string;
-  body: Array<any>;
+  body: Array<any> | string;
   img: string;
 }) {
   return (
@@ -31,11 +31,18 @@ export default function ContentImageBlock({
         </div>
 
         <div className="w-full sm:w-1/2 flex px-4 flex-col text-black text-sm font-normal font-['Plus Jakarta Sans'] gap-3">
-          {body.map((paragraph: string, index: number) => (
-            <div className="w-full" key={index}>
-              {paragraph}
-            </div>
-          ))}
+          {typeof body === "string" ? (
+            <div
+              className="w-full"
+              dangerouslySetInnerHTML={{ __html: body }}
+            />
+          ) : (
+            body.map((paragraph: string, index: number) => (
+              <div className="w-full" key={index}>
+                {paragraph}
+              </div>
+            ))
+          )}
         </div>
       </div>
     </div>

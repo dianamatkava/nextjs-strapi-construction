@@ -33,9 +33,9 @@ export default function Footer({ data }: SiteData) {
         </CTAGroup>
       </div>
       <div className="w-full h-full self-stretch px-5 md:px-10 md:px-20 flex-col justify-between items-start flex text-md">
-        <div className="self-stretch grow shrink basis-0 pt-2.5 pb-10 border-b border-black justify-between items-start inline-flex flex-wrap">
-          <div className="w-fit justify-start items-center gap-6 sm:gap-12 flex flex-col sm:flex-row">
-            <div className="flex-col sm:w-[350px] justify-start items-start gap-8 inline-flex">
+        <div className="self-stretch grow shrink basis-0 pt-2.5 pb-10 border-b border-black flex items-start gap-8 flex-nowrap">
+          <div className="grow h-full justify-start items-center gap-6 sm:gap-12 flex flex-col sm:flex-row">
+            <div className="w-full h-full flex-col sm:w-[350px] justify-start items-start gap-8 inline-flex">
               <div className="flex-col justify-start items-start text-[#828181] gap-4 inline-flex pt-5">
                 <Logo />
                 <div className="text-gray-400 text-sm">
@@ -68,7 +68,7 @@ export default function Footer({ data }: SiteData) {
                 </div>
               </div>
             </div>
-            <div className="flex justify-start items-start gap-12 md:gap-16 w-full sm:w-fit">
+            <div className="w-full h-full mt-[55px] md:mt-[105px] flex justify-start items-start gap-8 md:gap-12 w-full sm:w-fit">
               <div className="flex-col justify-start items-start gap-4 sm:gap-4 inline-flex">
                 <div className="self-stretch text-white text-md font-bold text-nowrap">
                   Services
@@ -107,7 +107,7 @@ export default function Footer({ data }: SiteData) {
               </div>
             </div>
           </div>
-          <div className="self-stretch w-1/4 py-[25px] flex-col justify-start items-start gap-4 sm:gap-8 hidden lg:inline-flex">
+          <div className="hidden lg:inline-flex flex-col justify-start items-start gap-4 sm:gap-8 w-1/4 py-[25px] flex-shrink-0">
             <div className="text-white text-md font-bold text-nowrap">
               Lets get Started
             </div>

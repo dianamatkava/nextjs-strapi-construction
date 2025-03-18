@@ -1,5 +1,4 @@
 import HeaderH1 from "@/app/ui/Components/HeaderH1";
-import ImageContainer from "@/app/ui/Components/ImageContainer";
 import React from "react";
 import AnimatedImage from "../Components/AnimatedImage";
 
@@ -27,7 +26,7 @@ export default function ContentImageBlock({
       </div>
       <div className="w-full h-full justify-between items-center flex flex-col sm:flex-row gap-8 relative">
         <div className="w-full sm:w-1/2 relative">
-          <AnimatedImage src={img} alt="Service Image" />
+          <AnimatedImage src={img} alt="Service Image" className="h-[200px]" />
         </div>
 
         <div className="w-full sm:w-1/2 flex px-4 flex-col text-black text-sm font-normal font-['Plus Jakarta Sans'] gap-3">

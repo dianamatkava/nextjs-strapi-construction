@@ -9,6 +9,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import Footer from "@/app/ui/Footer/Footer";
+import { global } from "@/app/data/globals";
 
 const headerRoutes = [
   { name: "Home", path: "/" },
@@ -113,7 +114,7 @@ export default function Header({
       {isNavOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex w-full">
           <div className="h-full w-4/5">
-            <Footer />
+            <Footer siteDescription={global.siteDescription} />
           </div>
           <div
             className="flex-1 bg-red-500 bg-opacity-0"

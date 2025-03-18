@@ -2,7 +2,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import ServiceListItem from "./ServiceListItem";
-import { APP_URL } from "@/app/constants";
 
 export default function ServiceList({ data }: { data: Service[] }) {
   const containerRef = useRef(null);

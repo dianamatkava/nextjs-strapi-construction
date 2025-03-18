@@ -1,35 +1,24 @@
-import '@/app/ui/global.css';
+import "@/app/ui/global.css";
 import Footer from "@/app/ui/Footer/Footer";
 import AppHeader from "@/app/ui/Header/AppHeader";
-import axios from "axios";
-
-const API_URL = process.env.NEXT_PUBLIC_STRAPI_API;
-
-async function getSiteData() {
-  try {
-    const res = await axios.get(`${API_URL}/global`);
-    return res.data.data;
-  } catch (error) {
-    console.error("Failed to fetch global data:", error);
-    return [];
-  }
-}
+import { global } from "@/app/data/globals";
 
 export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const global = await getSiteData();
-
-
   return (
     <html lang="en">
       <body className={`antialiased`}>
-      {/*<CustomCursor/>*/}
-        <AppHeader data={global}/>
+        {/*<CustomCursor/>*/}
+        <AppHeader
+          siteDescription={global.siteDescription}
+          siteSlogan={global.siteSlogan}
+          siteReview={global.siteReview}
+        />
         {children}
-        <Footer data={global}/>
+        <Footer siteDescription={global.siteDescription} />
       </body>
     </html>
   );

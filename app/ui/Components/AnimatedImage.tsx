@@ -13,7 +13,7 @@ export default function AnimatedImage({
 }) {
   return (
     <motion.div
-      className="relative w-full" // Container must have a defined size
+      className="relative w-full h-full" // Container must have a defined size
       initial={{ opacity: 0, scale: 0.95 }}
       whileInView={{ opacity: 1, scale: [1, 1.05, 1] }}
       transition={{
@@ -27,7 +27,7 @@ export default function AnimatedImage({
       <ImageContainer
         src={src}
         alt={alt}
-        className={`"rounded-lg " + ${className}`}
+        className={`rounded-lg ${className}`}
       />
     </motion.div>
   );

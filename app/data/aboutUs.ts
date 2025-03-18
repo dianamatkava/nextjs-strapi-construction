@@ -1,5 +1,5 @@
 export const aboutUs = {
-  title: "Otter Water - Comprehensive Water Damage Restoration",
+  title: "Otter Water Restoration",
   image: "/img/services/IMG_2779.PNG",
   description:
     "At <b>Otter Water Restoration</b>, we specialize in <b>comprehensive water damage restoration</b> for homes and businesses across <b>San Diego and the surrounding areas</b>. Whether it's a burst pipe, plumbing failure, or an unexpected leak, our team is equipped with the latest technology to restore your property—not just to its original condition, but even better.<br><br>We understand that water damage is stressful and time-sensitive, which is why we offer <b>24/7 emergency response</b> and guarantee to arrive on-site within <b>one hour</b> for an initial assessment. Our commitment to <b>precision, efficiency, and attention to detail</b> is what sets us apart, and it's what our customers appreciate most.",

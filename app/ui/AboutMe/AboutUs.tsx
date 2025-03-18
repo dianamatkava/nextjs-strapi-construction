@@ -25,7 +25,7 @@ export default function AboutUs() {
                 className="w-full text-black text-sm font-normal font-['Plus Jakarta Sans'] tracking-tight"
                 dangerouslySetInnerHTML={{ __html: aboutUs.description }}
               />
-              <div className="pt-4 w-full justify-start items-center gap-4 sm:gap-4 hidden sm:inline-flex">
+              <div className="pt-4 w-full justify-start items-center gap-4 hidden md:inline-flex">
                 <AchievementItem
                   key={1}
                   title={"Availability"}

@@ -8,7 +8,11 @@ import Image from "next/image";
 import CTAGroup from "@/app/ui/Components/CTAGroup";
 import { services } from "@/app/data/services";
 
-export default function Footer({ data }: SiteData) {
+export default function Footer({
+  siteDescription,
+}: {
+  siteDescription: string;
+}) {
   return (
     <div className="h-full bg-[#0e1518]/85 relative w-full sm:w-[calc(100%-2rem)] from-black via-black to-black m-0 sm:mx-4 sm:pt-[62px] sm:rounded-tl-3xl sm:rounded-tr-3xl flex-col justify-start items-center gap-3 inline-flex font-['Plus Jakarta Sans']">
       <Image
@@ -32,15 +36,13 @@ export default function Footer({ data }: SiteData) {
           </div>
         </CTAGroup>
       </div>
-      <div className="w-full h-full self-stretch px-5 md:px-10 md:px-20 flex-col justify-between items-start flex text-md">
+      <div className="w-full h-full self-stretch px-5 md:px-10 flex-col justify-between items-start flex text-md">
         <div className="self-stretch grow shrink basis-0 pt-2.5 pb-10 border-b border-black flex items-start gap-8 flex-nowrap">
           <div className="grow h-full justify-start items-center gap-6 sm:gap-12 flex flex-col sm:flex-row">
             <div className="w-full h-full flex-col sm:w-[350px] justify-start items-start gap-8 inline-flex">
               <div className="flex-col justify-start items-start text-[#828181] gap-4 inline-flex pt-5">
                 <Logo />
-                <div className="text-gray-400 text-sm">
-                  {data.siteDescription}
-                </div>
+                <div className="text-[#f5efe7] text-sm">{siteDescription}</div>
               </div>
               <div className="self-stretch h-[58px] justify-start items-center gap-5 inline-flex">
                 <div className="inline-flex justify-center items-center gap-4">
@@ -92,7 +94,19 @@ export default function Footer({ data }: SiteData) {
                 </div>
                 <div className="grow shrink basis-0 flex-col justify-start items-start gap-2.5 flex">
                   <Link
-                    href="/about"
+                    href="/#services"
+                    className="w-fit text-[#f5efe7] text-sm cursor-pointer hover:text-[#828181]"
+                  >
+                    Services
+                  </Link>
+                  <Link
+                    href="/#news"
+                    className="w-fit text-[#f5efe7] text-sm cursor-pointer hover:text-[#828181]"
+                  >
+                    Blog
+                  </Link>
+                  <Link
+                    href="/#about"
                     className="w-fit text-[#f5efe7] text-sm cursor-pointer hover:text-[#828181]"
                   >
                     About Us

@@ -1,13 +1,5 @@
-import ChooseUs from "@/app/ui/Steps/ChooseUs";
-import FAQ from "@/app/ui/FAQ/FAQ";
-import NewsPage from "@/app/ui/News/NewsPage";
+import { notFound } from "next/navigation";
 
-export default function Page () {
-  return (
-    <div className={'w-full flex flex-col gap-12'}>
-      <NewsPage/>
-      <ChooseUs/>
-      <FAQ/>
-    </div>
-  )
+export default function Page() {
+  return notFound();
 }

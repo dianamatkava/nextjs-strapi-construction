@@ -5,7 +5,6 @@ import FAQ from "@/app/ui/FAQ/FAQ";
 import AboutUs from "@/app/ui/AboutMe/AboutUs";
 import { aboutUs } from "../data/aboutUs";
 import React from "react";
-import ContactUsBlock from "../ui/ContactUs/ContactUsBlock";
 
 export default function Page() {
   const betweenComponents = [ChooseUs];

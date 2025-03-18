@@ -11,10 +11,7 @@ export default function ImageContainer({
 }) {
   return (
     <div
-      className={
-        "w-full h-[400px] rounded-lg relative p-4 overflow-hidden " +
-        `${className}`
-      }
+      className={`w-full sm:h-[400px] rounded-lg relative p-4 overflow-hidden ${className}`}
     >
       <div className="absolute inset-0 rounded-[inherit]">
         <Image

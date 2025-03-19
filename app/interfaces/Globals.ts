@@ -17,5 +17,5 @@ interface Service {
     description: string;
     body: string[];
     image: string;
-  };
+  }[];
 }

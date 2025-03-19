@@ -44,7 +44,7 @@ export default function SubscribeForm() {
       console.error(
         `Failed to submit form: ${
           error instanceof Error ? error.message : "Unknown error"
-        }`
+        }`,
       );
     }
     setFormSubmitted(true);

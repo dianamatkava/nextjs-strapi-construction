@@ -33,7 +33,7 @@ export default function NewsPageContentTable({
                   {item.title}
                 </div>
               </div>
-            )
+            ),
         )}
       </div>
     </div>

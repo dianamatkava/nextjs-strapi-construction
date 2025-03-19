@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { useState, useEffect } from "react";
 import AnimatedCursor from "react-animated-cursor";
 
@@ -7,7 +7,8 @@ export default function CustomCursor() {
 
   useEffect(() => {
     const checkDevice = () => {
-      const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
+      const isTouchDevice =
+        "ontouchstart" in window || navigator.maxTouchPoints > 0;
       setEnableCursor(!isTouchDevice && window.innerWidth >= 1024);
     };
 

@@ -5,7 +5,6 @@ import ChooseUs from "@/app/ui/Steps/ChooseUs";
 import StepByStepGuide from "@/app/ui/Steps/StepByStepGuide";
 import FAQ from "@/app/ui/FAQ/FAQ";
 import ContactUsBlock from "@/app/ui/ContactUs/ContactUsBlock";
-import { API_URL } from "@/app/constants";
 import { services } from "@/app/data/services";
 import { notFound } from "next/navigation";
 import React from "react";
@@ -13,14 +12,14 @@ import React from "react";
 async function getService(documentId: string) {
   try {
     const response = await fetch(
-      `${API_URL}/services/${documentId}?populate=*`,
+      `${process.env.NEXT_PUBLIC_API_URL}/services/${documentId}?populate=*`,
       {
         cache: "no-store",
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_ACCESS_TOKEN}`,
         },
-      }
+      },
     );
 
     if (!response.ok) {

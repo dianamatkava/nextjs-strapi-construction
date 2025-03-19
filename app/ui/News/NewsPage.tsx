@@ -35,7 +35,7 @@ export default function NewsPage({
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.5 },
     );
 
     body.forEach((item) => {

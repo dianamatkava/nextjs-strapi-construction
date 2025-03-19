@@ -1,91 +1,149 @@
-import nodemailer from 'nodemailer';
+import nodemailer from "nodemailer";
 
-export async function POST(request) {
-    const { name, email, message } = await request.json();
+export async function POST(request: Request) {
+  const { name, email, message, phone } = await request.json();
 
-    if (!name || !email || !message) {
-      return new Response(
-          JSON.stringify({ error: 'All fields are required' }),
-          { status: 400, headers: { 'Content-Type': 'application/json' } }
-      );
-    }
-
-    const SMTP_SERVER_HOST = process.env.SMTP_SERVER_HOST;
-    const SMTP_SERVER_PORT = process.env.SMTP_SERVER_PORT;
-    const SMTP_SERVER_USERNAME = process.env.SMTP_SERVER_USERNAME;
-    const SMTP_SERVER_PASSWORD = process.env.SMTP_SERVER_PASSWORD;
-    const DEBUG = process.env.DEBUG;
-
-    const transporter = nodemailer.createTransport({
-      host: SMTP_SERVER_HOST,
-      auth: {
-        user: SMTP_SERVER_USERNAME,
-        pass: SMTP_SERVER_PASSWORD,
-      },
-      debug: DEBUG,
-      logger: true,
-      port: Number(SMTP_SERVER_PORT),
-      secure: false,
-      tls: {
-          ciphers: 'SSLv3'
-      }
+  if (!name || !email) {
+    return new Response(JSON.stringify({ error: "All fields are required" }), {
+      status: 400,
+      headers: { "Content-Type": "application/json" },
     });
+  }
 
-    const mailOptionsRequest = {
+  const SMTP_SERVER_HOST = process.env.SMTP_SERVER_HOST;
+  const SMTP_SERVER_PORT = process.env.SMTP_SERVER_PORT;
+  const SMTP_SERVER_USERNAME = process.env.SMTP_SERVER_USERNAME;
+  const SMTP_SERVER_PASSWORD = process.env.SMTP_SERVER_PASSWORD;
+  const DEBUG = process.env.DEBUG;
+
+  const transporter = nodemailer.createTransport({
+    host: SMTP_SERVER_HOST,
+    port: Number(SMTP_SERVER_PORT),
+    secure: true,
+    auth: {
+      user: SMTP_SERVER_USERNAME,
+      pass: SMTP_SERVER_PASSWORD,
+    },
+    debug: DEBUG === "true",
+    tls: {
+      rejectUnauthorized: true,
+      minVersion: "TLSv1.2",
+    },
+  });
+
+  let adminEmailSent = false;
+  let customerEmailSent = false;
+
+  // Send notification to admin
+  try {
+    console.log("Starting notification email to admin");
+    await transporter.sendMail({
       from: SMTP_SERVER_USERNAME,
       to: SMTP_SERVER_USERNAME,
-      subject: `Request Form from ${name}`,
+      subject: `[APP] Got new message from ${name}`,
       html: `
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Phone:</strong> ${phone}</p>
         <p><strong>Message:</strong> ${message}</p>
       `,
-    };
+    });
+    console.log("Admin notification sent successfully");
+    adminEmailSent = true;
+  } catch (error) {
+    console.error("Error sending admin notification:", error);
+    return new Response(
+      JSON.stringify({
+        error:
+          error instanceof Error
+            ? error.message
+            : "Failed to send admin notification",
+        step: "admin_notification",
+      }),
+      {
+        status: 500,
+        headers: { "Content-Type": "application/json" },
+      },
+    );
+  }
 
-
-    const mailOptionsResponse = {
-      from: SMTP_SERVER_USERNAME,
-      to: email,
-      subject: `Thank you for contacting AMESC GROUP`,
-      html: `
-        <p>Dear ${name},</p>
-
-        <p>Thank you for reaching out to us.</p>
-        <p>We have received your message and will process it shortly. Our team is dedicated to responding promptly to all inquiries during our working hours:</p>
-        <p><strong>Working Hours:</strong><br>
-          Monday to Friday: 9:00 AM - 6:00 PM
-        </p>
-        <p>Thank you for choosing AMESC GROUP. We appreciate your patience and look forward to assisting you.</p>
-        <p>Kind regards,<br>
-          The AMESC GROUP Team<br>
-          <a href="mailto:info@time4construction.com">info@time4construction.com</a><br>
-          <a href="www.timeforconstruction.com" target="_blank">www.timeforconstruction.com</a>
-        </p>
-      `,
-    };
-
-  const responseStatus = sendMail(mailOptionsResponse, transporter)
-  const status = sendMail(mailOptionsRequest, transporter)
-
-    if (!responseStatus || !status) {
-      return new Response(
-          JSON.stringify({ error: 'Internal Server Error' }),
-          { status: 500, headers: { 'Content-Type': 'application/json' } }
-      )} else {
-        return new Response(
-          JSON.stringify({ message: 'Email sent successfully!' }),
-          { status: 200, headers: { 'Content-Type': 'application/json' } }
-      );
-    }
-}
-
-
-async function sendMail(sendOptions, transporter) {
+  // Send confirmation to customer
   try {
-      await transporter.sendMail(sendOptions);
-      return true;
-    } catch (error) {
-      console.error('Error sending email:', error);
-      return false;
+    console.log("=== Starting Customer Email Process ===");
+    console.log("Email Configuration:", {
+      from: `"ALX Handyman" <${SMTP_SERVER_USERNAME}>`,
+      to: email,
+      host: SMTP_SERVER_HOST,
+      port: SMTP_SERVER_PORT,
+      secure: true,
+      debug: DEBUG === "true",
+    });
+
+    const mailOptions = {
+      from: `"ALX Handyman" <${SMTP_SERVER_USERNAME}>`,
+      to: email,
+      subject: `Thank you for contacting alxhandyman.com`,
+      html: `
+      <p>Dear ${name},</p>
+      <p>Thank you for contacting Otter Water Restoration. We have received your message and are currently reviewing your request.</p>
+      <p>One of our team members will be in touch with you shortly. We appreciate your patience and look forward to assisting you with your water restoration needs.</p>
+      <p>Kind regards,<br>
+        Email: <a href="mailto:service@otterwaterrestoration.com">service@otterwaterrestoration.com</a><br>
+        Website: <a href="https://www.otterwaterrestoration.com" target="_blank">www.otterwaterrestoration.com</a>
+      </p>
+      `,
+      headers: {
+        "X-Priority": "1",
+        "X-MSMail-Priority": "High",
+        Importance: "high",
+      },
+    };
+
+    const info = await transporter.sendMail(mailOptions);
+    console.log("Email sent successfully! Response:", {
+      messageId: info.messageId,
+      response: info.response,
+      accepted: info.accepted,
+      rejected: info.rejected,
+    });
+
+    customerEmailSent = true;
+  } catch (error) {
+    console.error("=== Email Send Error ===");
+    console.error("Error sending customer confirmation:", error);
+    if (error instanceof Error) {
+      console.error("Detailed error information:", {
+        name: error.name,
+        message: error.message,
+        stack: error.stack,
+        cause: error.cause,
+      });
     }
+    return new Response(
+      JSON.stringify({
+        error:
+          error instanceof Error
+            ? error.message
+            : "Failed to send customer confirmation",
+        step: "customer_confirmation",
+        adminEmailSent,
+      }),
+      {
+        status: 500,
+        headers: { "Content-Type": "application/json" },
+      },
+    );
+  }
+
+  return new Response(
+    JSON.stringify({
+      message: "Emails sent successfully!",
+      adminEmailSent,
+      customerEmailSent,
+    }),
+    {
+      status: 200,
+      headers: { "Content-Type": "application/json" },
+    },
+  );
 }

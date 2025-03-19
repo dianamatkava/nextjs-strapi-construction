@@ -6,7 +6,7 @@ import ServiceListItem from "./ServiceListItem";
 export default function ServiceList({ data }: { data: Service[] }) {
   const containerRef = useRef(null);
   const [activeService, setActiveService] = useState<number>(
-    Number(data[0].id)
+    Number(data[0].id),
   );
   const [isVisible, setIsVisible] = useState(false);
   const [hoverSelected, setHoverSelected] = useState<number | null>(null);
@@ -20,7 +20,7 @@ export default function ServiceList({ data }: { data: Service[] }) {
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     const currentRef = containerRef.current;
@@ -41,7 +41,7 @@ export default function ServiceList({ data }: { data: Service[] }) {
     if (!Array.isArray(data) || data.length === 0) return;
     const timeout = setTimeout(() => {
       const currentIndex = data.findIndex(
-        (e) => Number(e.id) === Number(activeService)
+        (e) => Number(e.id) === Number(activeService),
       );
       const nextIndex = (currentIndex + 1) % data.length;
 

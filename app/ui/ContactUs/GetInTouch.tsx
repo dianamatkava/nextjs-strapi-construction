@@ -2,6 +2,9 @@ import HeaderH1 from "@/app/ui/Components/HeaderH1";
 import GetInTouchItem from "@/app/ui/ContactUs/GetInTouchItem";
 import { MdAlternateEmail } from "react-icons/md";
 import React from "react";
+import { APP_PHONE_NUMBER, APP_SERVICE_EMAIL } from "@/app/constants";
+import { FaPhone } from "react-icons/fa";
+import { LuPhone } from "react-icons/lu";
 
 export default function GetInTouch() {
   return (
@@ -16,32 +19,34 @@ export default function GetInTouch() {
       </div>
       <div className="w-full h-fit justify-start items-start gap-12 inline-flex flex-wrap">
         <GetInTouchItem
+          link={`tel:${APP_PHONE_NUMBER}`}
           title={"Call us"}
           description={"Mon-Fri from 8am to 5pm"}
-          value={"+1 747 295-5409"}
+          value={APP_PHONE_NUMBER || ""}
         >
           <div className="w-fit flex justify-center items-center p-1 border rounded-md">
-            <MdAlternateEmail size={14} />
+            <LuPhone size={14} />
           </div>
         </GetInTouchItem>
         <GetInTouchItem
+          link={`mailto:${APP_SERVICE_EMAIL}`}
           title={"Chat to us"}
           description={"Our friendly team is here to help. "}
-          value={"info@otterwater.io"}
+          value={APP_SERVICE_EMAIL || ""}
         >
           <div className="w-fit flex justify-center items-center p-1 border rounded-md">
             <MdAlternateEmail size={14} />
           </div>
         </GetInTouchItem>
-        <GetInTouchItem
-          title={"Call us"}
+        {/* <GetInTouchItem
+          title={"Visit us"}
           description={"Mon-Fri from 8am to 5pm"}
-          value={"+1 747 295-5409"}
+          value={APP_PHONE_NUMBER || ""}
         >
           <div className="w-fit flex justify-center items-center p-1 border rounded-md">
             <MdAlternateEmail size={14} />
           </div>
-        </GetInTouchItem>
+        </GetInTouchItem> */}
       </div>
     </div>
   );

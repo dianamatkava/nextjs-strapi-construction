@@ -7,6 +7,12 @@ import { FaFacebookF } from "react-icons/fa";
 import Image from "next/image";
 import CTAGroup from "@/app/ui/Components/CTAGroup";
 import { services } from "@/app/data/services";
+import {
+  APP_FACEBOOK_URL,
+  APP_INSTAGRAM_URL,
+  APP_PHONE_NUMBER,
+  APP_SERVICE_EMAIL,
+} from "@/app/constants";
 
 export default function Footer({
   siteDescription,
@@ -39,23 +45,26 @@ export default function Footer({
               <div className="self-stretch h-[58px] justify-start items-center gap-5 inline-flex">
                 <div className="inline-flex justify-center items-center gap-4">
                   <a
-                    href="https://www.instagram.com/amesc_group"
-                    className="justify-start items-start rounded-[50px] border border-[#212121] p-3 text-[#828181] cursor-pointer hover:text-[#f5efe7] hover:border-[#A4A2A0]"
+                    href={APP_INSTAGRAM_URL}
+                    className="justify-start items-start rounded-[50px] border border-[#2a2a2a] bg-white/5 p-3 text-[#828181] cursor-pointer hover:text-[#f5efe7] hover:border-[#A4A2A0] hover:bg-white/10"
                   >
                     <FiInstagram width={24} />
                   </a>
-                  <div className="justify-start items-start rounded-[50px] border border-[#212121] p-3 text-[#828181] cursor-pointer hover:text-[#f5efe7] hover:border-[#A4A2A0]">
-                    <FaFacebookF width={24} />
-                  </div>
                   <a
-                    href={`mailto:'email@example.com'`}
-                    className="justify-start items-start rounded-[50px] border border-[#212121] p-3 text-[#828181] cursor-pointer hover:text-[#f5efe7] hover:border-[#A4A2A0]"
+                    href={APP_FACEBOOK_URL}
+                    className="justify-start items-start rounded-[50px] border border-[#2a2a2a] bg-white/5 p-3 text-[#828181] cursor-pointer hover:text-[#f5efe7] hover:border-[#A4A2A0] hover:bg-white/10"
+                  >
+                    <FaFacebookF width={24} />
+                  </a>
+                  <a
+                    href={`mailto:${APP_SERVICE_EMAIL}`}
+                    className="justify-start items-start rounded-[50px] border border-[#2a2a2a] bg-white/5 p-3 text-[#828181] cursor-pointer hover:text-[#f5efe7] hover:border-[#A4A2A0] hover:bg-white/10"
                   >
                     <MdOutlineAlternateEmail width={24} />
                   </a>
                   <a
-                    href="tel:+17472955409"
-                    className="justify-start items-start rounded-[50px] border border-[#212121] p-3 text-[#828181] cursor-pointer hover:text-[#f5efe7] hover:border-[#A4A2A0]"
+                    href={`tel:${APP_PHONE_NUMBER}`}
+                    className="justify-start items-start rounded-[50px] border border-[#2a2a2a] bg-white/5 p-3 text-[#828181] cursor-pointer hover:text-[#f5efe7] hover:border-[#A4A2A0] hover:bg-white/10"
                   >
                     <FiPhone width={24} />
                   </a>

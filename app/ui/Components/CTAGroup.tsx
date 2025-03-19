@@ -10,11 +10,11 @@ export default function CTAGroup({
   mode?: "dark" | "light";
 }) {
   const buttonStyle =
-    mode === "dark" ? "bg-white text-black" : "bg-black text-white";
+    mode === "dark" ? "bg-white text-black" : "bg-bgPrimary text-white";
   const secondaryStyle =
     mode === "dark"
       ? "text-white border-white"
-      : "text-black border-black border-1";
+      : "text-black border-bgPrimary !border-[1.5px]";
   const availableTextColor =
     mode === "dark" ? "text-[#e4e4e4]" : "text-gray-600";
 

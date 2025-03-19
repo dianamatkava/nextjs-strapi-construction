@@ -10,6 +10,13 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import Footer from "@/app/ui/Footer/Footer";
 import { global } from "@/app/data/globals";
+import {
+  APP_FACEBOOK_URL,
+  APP_INSTAGRAM_URL,
+  APP_SERVICE_EMAIL,
+  APP_WHATSAPP_NUMBER,
+} from "@/app/constants";
+import { MdOutlineAlternateEmail } from "react-icons/md";
 
 const headerRoutes = [
   { name: "Home", path: "/" },
@@ -36,26 +43,33 @@ export default function Header({
       <div className="w-full h-fit p-5 pb-3 flex-col justify-between items-start inline-flex">
         <div className="w-full inline-flex">
           <div className="hidden w-full md:inline-flex items-center">
-            <div
+            <a
+              href={APP_INSTAGRAM_URL}
+              target="_blank"
               className={`p-1.5 items-center cursor-pointer ${textColorClass} hover:text-textHoverOnDark`}
             >
               <FaInstagram size={15} />
-            </div>
-            <div
+            </a>
+            <a
+              href={APP_FACEBOOK_URL}
+              target="_blank"
               className={`p-1.5 items-center cursor-pointer ${textColorClass} hover:text-textHoverOnDark`}
             >
               <LuFacebook size={15} />
-            </div>
-            <div
+            </a>
+            <a
+              href={`mailto:${APP_SERVICE_EMAIL}`}
+              target="_blank"
               className={`p-1.5 items-center cursor-pointer ${textColorClass} hover:text-textHoverOnDark`}
             >
-              <FaWhatsapp size={15} />
-            </div>
-            <div
+              <MdOutlineAlternateEmail size={15} />
+            </a>
+            <a
+              href={`tel:${APP_WHATSAPP_NUMBER}`}
               className={`p-1.5 items-center cursor-pointer ${textColorClass} hover:text-textHoverOnDark`}
             >
               <FiPhone size={15} />
-            </div>
+            </a>
           </div>
           <div className="w-full inline-flex justify-start items-center">
             <Logo />

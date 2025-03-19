@@ -1,19 +1,48 @@
-import React from 'react';
+import React from "react";
 
-const InputDarkLineField = ({label, placeholder, name, type="input", required=true, inputClassName="", labelClassName="", children=null}: {label?: string, placeholder: string, required?: boolean, children?: React.ReactElement}) => {
+const InputDarkLineField = ({
+  label,
+  placeholder,
+  name,
+  type = "input",
+  required = true,
+  inputClassName = "",
+  labelClassName = "",
+  children,
+}: {
+  label?: string;
+  placeholder: string;
+  required?: boolean;
+  children?: React.ReactElement;
+  name: string;
+  type: string;
+  inputClassName?: string;
+  labelClassName?: string;
+}) => {
   return (
-    <div className={`relative w-full flex flex-col items-start justify-start text-xs gap-2`}>
-      {label &&
+    <div
+      className={`relative w-full flex flex-col items-start justify-start text-xs gap-2`}
+    >
+      {label && (
         <label
-          className={"self-stretch text-black text-xs font-bold font-['Plus Jakarta Sans'] leading-tight tracking-tight" + ` ${labelClassName}`}>
-          {label} {required && <span className={'text-red-600 px-1'}>*</span>}
+          className={
+            "self-stretch text-black text-xs font-bold font-['Plus Jakarta Sans'] leading-tight tracking-tight" +
+            ` ${labelClassName}`
+          }
+        >
+          {label} {required && <span className={"text-red-600 px-1"}>*</span>}
         </label>
-      }
-      <input name={name} type={type} className={`rounded-3xl pl-8 py-3 text-xs px-2 w-full ${inputClassName}`}
-             placeholder={placeholder} required={required}/>
+      )}
+      <input
+        name={name}
+        type={type}
+        className={`rounded-3xl pl-8 py-3 text-xs px-2 w-full ${inputClassName}`}
+        placeholder={placeholder}
+        required={required}
+      />
       {children && children}
     </div>
   );
-}
+};
 
 export default InputDarkLineField;

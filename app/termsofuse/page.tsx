@@ -1,7 +1,7 @@
 "use client";
 import BackButton from "@/app/ui/Components/BackButton";
 import HeaderH1 from "@/app/ui/Components/HeaderH1";
-
+import { APP_PHONE_NUMBER, APP_SERVICE_EMAIL } from "../constants";
 export default function TermsOfUse() {
   return (
     <div className="w-full h-full flex justify-center items-start flex-col pt-5 px-5 sm:px-16 py-8 gap-8">
@@ -91,9 +91,9 @@ export default function TermsOfUse() {
               us at:
             </p>
             <p className="mt-2">
-              Email: legal@example.com
+              Email: {APP_SERVICE_EMAIL}
               <br />
-              Phone: (555) 123-4567
+              Phone: {APP_PHONE_NUMBER}
             </p>
           </section>
         </div>

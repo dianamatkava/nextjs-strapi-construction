@@ -1,6 +1,14 @@
-import { useState } from 'react';
+import { useState } from "react";
 
-const Checkbox = ({ label, name, children }) => {
+const Checkbox = ({
+  label,
+  name,
+  children,
+}: {
+  label?: string;
+  name: string;
+  children?: React.ReactElement;
+}) => {
   const [checked, setChecked] = useState(false);
 
   const handleChange = () => {
@@ -17,7 +25,13 @@ const Checkbox = ({ label, name, children }) => {
         onChange={handleChange}
         className="cursor-pointer"
       />
-      {children ? children : <label htmlFor={name} className="cursor-pointer">{label}</label>}
+      {children ? (
+        children
+      ) : (
+        <label htmlFor={name} className="cursor-pointer">
+          {label}
+        </label>
+      )}
     </div>
   );
 };

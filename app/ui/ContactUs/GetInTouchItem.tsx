@@ -1,11 +1,19 @@
 import { MdAlternateEmail } from "react-icons/md";
 import React from "react";
 
-
-export default function GetInTouchItem (
-  {title, description, value, children}:
-  {title: string, description: string, value: string, children: React.ReactElement}
-) {
+export default function GetInTouchItem({
+  title,
+  description,
+  value,
+  link,
+  children,
+}: {
+  title: string;
+  description: string;
+  value: string;
+  link: string;
+  children: React.ReactElement;
+}) {
   return (
     <div className="w-fit h-fit justify-start items-start gap-4 inline-flex">
       {children}
@@ -16,10 +24,15 @@ export default function GetInTouchItem (
         <div className="self-stretch text-[#595959] text-sm font-normal font-['Plus Jakarta Sans']">
           {description}
         </div>
-        <div className="self-stretch text-black text-sm font-semibold font-['Plus Jakarta Sans'] underline">
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="self-stretch text-black text-sm font-semibold font-['Plus Jakarta Sans'] underline"
+        >
           {value}
-        </div>
+        </a>
       </div>
     </div>
-  )
+  );
 }

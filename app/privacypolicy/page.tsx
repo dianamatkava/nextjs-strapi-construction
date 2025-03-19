@@ -1,6 +1,7 @@
 "use client";
 import BackButton from "@/app/ui/Components/BackButton";
 import HeaderH1 from "@/app/ui/Components/HeaderH1";
+import { APP_PHONE_NUMBER, APP_SERVICE_EMAIL } from "../constants";
 
 export default function PrivacyPolicy() {
   return (
@@ -80,9 +81,9 @@ export default function PrivacyPolicy() {
               contact us at:
             </p>
             <p className="mt-2">
-              Email: privacy@example.com
+              Email: {APP_SERVICE_EMAIL}
               <br />
-              Phone: (555) 123-4567
+              Phone: {APP_PHONE_NUMBER}
             </p>
           </section>
         </div>

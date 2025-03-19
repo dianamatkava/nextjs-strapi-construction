@@ -19,7 +19,7 @@ export default function FAQQuestion({
   };
 
   return (
-    <div className="w-full flex flex-col pt-3 pb-2 px-1 border-b border-[#e1e1eb] justify-center items-start gap-3">
+    <div className="w-full flex flex-col pt-3 pb-2 px-1 border-b border-[#e1e1eb] justify-center items-start gap-1">
       <div
         className="w-full justify-between items-center gap-4 inline-flex"
         onClick={toggleFAQ}

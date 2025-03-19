@@ -22,11 +22,15 @@ export default function ServiceList({ data }: { data: Service[] }) {
       },
       { threshold: 0.1 }
     );
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
+
+    const currentRef = containerRef.current;
+
+    if (currentRef) {
+      observer.observe(currentRef);
     }
+
     return () => {
-      if (containerRef.current) observer.unobserve(containerRef.current);
+      if (currentRef) observer.unobserve(currentRef);
     };
   }, []);
 
@@ -34,21 +38,18 @@ export default function ServiceList({ data }: { data: Service[] }) {
     if (hoverSelected) return;
     if (!isVisible) return;
 
-    const scrollY = window.scrollY;
+    if (!Array.isArray(data) || data.length === 0) return;
     const timeout = setTimeout(() => {
-      if (!Array.isArray(data) || data.length === 0) return;
-
       const currentIndex = data.findIndex(
         (e) => Number(e.id) === Number(activeService)
       );
       const nextIndex = (currentIndex + 1) % data.length;
 
-      setActiveService(Number(data[nextIndex].id));
-      window.scrollTo(0, scrollY);
+      setActiveService(Number(data[nextIndex]?.id));
     }, 1500);
 
     return () => clearTimeout(timeout);
-  }, [activeService, data, isVisible, hoverSelected]);
+  }, [activeService, isVisible, hoverSelected]);
 
   const onMouseEnterService = (id: number) => {
     setHoverSelected(id);

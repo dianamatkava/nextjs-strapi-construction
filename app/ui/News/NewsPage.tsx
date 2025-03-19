@@ -63,14 +63,10 @@ export default function NewsPage({
         image={image}
         tag={tag}
       />
-      <div
-        className={
-          "w-full inline-flex items-start justify-between gap-8 sm:px-12 px-0"
-        }
-      >
+      <div className={"w-full inline-flex items-start justify-between gap-4"}>
         <div
           className={
-            "w-1/5 hidden sm:flex flex-col items-start justify-start gap-8 sticky top-24"
+            "w-2/5 hidden sm:flex flex-col items-start justify-start gap-8 sticky top-24"
           }
         >
           <NewsPageContentTable

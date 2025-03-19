@@ -21,20 +21,7 @@ export default function ServicePageDescription({
             {description}
           </div>
         </div>
-        <CTAGroup
-          primaryButtonLink={"/contact"}
-          primaryButtonStyle={"bg-bgPrimary text-white"}
-          secondaryButtonStyle={"text-black border-black border-[1.5px]"}
-        >
-          <div className="w-fit h-full flex-col justify-center items-start gap-1 inline-flex">
-            <div className="self-stretch text-black text-sm font-semibold font-['Plus Jakarta Sans']">
-              Contact us
-            </div>
-            <div className="self-stretch text-black text-sm font-normal font-['Plus Jakarta Sans']">
-              +01 1 26-55-56-00
-            </div>
-          </div>
-        </CTAGroup>
+        <CTAGroup primaryButtonLink={"/contact"} mode="light" />
       </div>
       <ImageContainer
         src={image}

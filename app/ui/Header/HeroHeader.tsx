@@ -34,15 +34,7 @@ export default function HeroHeader({
                   {siteDescription}
                 </div>
               </div>
-              <CTAGroup
-                primaryButtonLink={"/contact"}
-                primaryButtonStyle={"bg-bgDarkPrimary text-black"}
-                secondaryButtonStyle={"text-white border-white"}
-              >
-                <div className="text-center text-[#e4e4e4] text-sm font-medium font-['Plus Jakarta Sans']">
-                  Available 24/7
-                </div>
-              </CTAGroup>
+              <CTAGroup primaryButtonLink={"/contact"} mode="dark" />
             </div>
             <div className=" w-full h-fit flex flex-col items-center justify-center gap-5">
               <div className="w-full h-fit flex items-center justify-center gap-8">

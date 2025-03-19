@@ -11,7 +11,7 @@ export default function ContactUs() {
       </div>
       <div className="w-full max-w-[500px] h-full justify-center items-start gap-8 flex flex-col">
         <div className="w-full h-fit flex-col justify-center items-center gap-3 inline-flex">
-          <Logo />
+          <Logo className="hidden sm:inline-flex" />
           <HeaderH1
             title={"Otter Water is here to help!"}
             id={"contact"}

@@ -26,21 +26,13 @@ export default function Footer({
         <div className="w-full max-w-[700px] px-5 text-center text-white text-5xl font-normal leading-18">
           Get comprehensive Solution for Repair Services
         </div>
-        <CTAGroup
-          primaryButtonLink={"/contact"}
-          primaryButtonStyle={"bg-bgDarkPrimary text-black"}
-          secondaryButtonStyle={"text-white border-white"}
-        >
-          <div className="text-center text-[#e4e4e4] text-sm font-medium font-['Plus Jakarta Sans']">
-            Available 24/7
-          </div>
-        </CTAGroup>
+        <CTAGroup primaryButtonLink={"/contact"} mode="dark" />
       </div>
       <div className="w-full h-full self-stretch px-5 md:px-10 flex-col justify-between items-start flex text-md">
         <div className="self-stretch grow shrink basis-0 pt-2.5 pb-10 border-b border-black flex items-start gap-8 flex-nowrap">
           <div className="grow h-full justify-start items-center gap-6 sm:gap-12 flex flex-col sm:flex-row">
             <div className="w-full h-full flex-col sm:w-[350px] justify-start items-start gap-8 inline-flex">
-              <div className="flex-col justify-start items-start text-[#828181] gap-4 inline-flex pt-5">
+              <div className="text-white flex-col justify-start items-start gap-4 inline-flex pt-5">
                 <Logo />
                 <div className="text-[#f5efe7] text-sm">{siteDescription}</div>
               </div>
@@ -75,7 +67,7 @@ export default function Footer({
                 <div className="self-stretch text-white text-md font-bold text-nowrap">
                   Services
                 </div>
-                <div className="grow shrink basis-0 flex-col justify-start items-start gap-2.5 flex">
+                <div className="sm:w-full max-w-[180px] grow shrink basis-0 flex-col justify-start items-start gap-2.5 flex">
                   {services.map((service, index) => (
                     <Link
                       key={index}
@@ -129,20 +121,20 @@ export default function Footer({
           </div>
         </div>
         <div className="w-full inline-flex pt-4 pb-2.5 border-t border-neutral-700 justify-between items-center text-sm">
-          <div className="text-[#e2e2e2] text-nowrap text-xs font-normal cursor-pointer hover:text-[#f5efe7]">
+          <div className="text-[#e2e2e2] text-xs font-normal">
             © 2025 All Rights Reserved
           </div>
-          <div className={"w-fit inline-flex gap-1 justify-end flex-wrap"}>
+          <div className="flex items-center gap-2">
             <Link
               href="/privacypolicy"
-              className="text-nowrap text-xs text-[#e2e2e2] font-normal cursor-pointer hover:text-[#f5efe7] w-fit text-end"
+              className="text-xs text-[#e2e2e2] font-normal hover:text-[#f5efe7] transition-colors text-nowrap"
             >
               Privacy Policy
             </Link>
-            <span className="text-[#e2e2e2] font-normal">|</span>
+            <span className="text-[#e2e2e2]">|</span>
             <Link
               href="/termsofuse"
-              className="text-nowrap text-xs text-[#e2e2e2] font-normal cursor-pointer hover:text-[#f5efe7] w-fit text-end"
+              className="text-xs text-[#e2e2e2] font-normal hover:text-[#f5efe7] transition-colors text-nowrap"
             >
               Terms of Service
             </Link>

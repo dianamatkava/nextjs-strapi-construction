@@ -9,7 +9,7 @@ export default function StepByStepGuideHeader() {
             Set-by-Step Guide to Getting Your Task Done with{" "}
           </span>
           <span className="text-black font-bold font-['Plus Jakarta Sans']">
-            otterwater.io
+            otterwaterrestoration.com
           </span>
         </div>
         <div className="self-stretch text-[#595959] text-sm font-normal font-['Plus Jakarta Sans']">

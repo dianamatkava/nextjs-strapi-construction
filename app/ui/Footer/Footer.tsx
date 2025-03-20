@@ -110,7 +110,7 @@ export default function Footer({
                     Blog
                   </Link>
                   <Link
-                    href="/#about"
+                    href="/about"
                     className="w-fit text-[#f5efe7] text-sm cursor-pointer hover:text-[#828181]"
                   >
                     About Us

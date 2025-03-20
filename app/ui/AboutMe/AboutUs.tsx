@@ -4,6 +4,7 @@ import AchievementItem from "@/app/ui/Components/AchievementItem";
 import AnimatedImage from "@/app/ui/Components/AnimatedImage";
 import { aboutUs } from "@/app/data/aboutUs";
 import HeaderH1 from "../Components/HeaderH1";
+import ImageContainer from "../Components/ImageContainer";
 
 export default function AboutUs({
   type = "section",
@@ -29,13 +30,11 @@ export default function AboutUs({
                   className={"justify-start items-center text-start"}
                 />
               )}
-              <div className="relative block w-full sm:h-[250px] !h-[200px] md:hidden">
-                <AnimatedImage
-                  src={aboutUs.image}
-                  alt="About Us Image"
-                  className="object-cover"
-                />
-              </div>
+              <ImageContainer
+                src={aboutUs.image}
+                alt={aboutUs.title}
+                className={"!h-[350px]"}
+              />
               <div
                 className="w-full text-black text-sm font-normal font-['Plus Jakarta Sans'] tracking-tight"
                 dangerouslySetInnerHTML={{ __html: aboutUs.description }}

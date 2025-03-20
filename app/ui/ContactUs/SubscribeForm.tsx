@@ -96,7 +96,7 @@ export default function SubscribeForm() {
             className="cursor-pointer text-[#828181] text-xs font-normal flex gap-1"
           >
             I agree to
-            <Link href={"/termsofuse"} className={"underline"} target="_blank">
+            <Link href={"/termsofuse"} className={"underline"}>
               Terms Of Use
             </Link>
             <span className={"text-red-600"}>*</span>

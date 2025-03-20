@@ -43,33 +43,30 @@ export default function Header({
       <div className="w-full h-fit p-5 pb-3 flex-col justify-between items-start inline-flex">
         <div className="w-full inline-flex">
           <div className="hidden w-full md:inline-flex items-center">
-            <a
-              href={APP_INSTAGRAM_URL}
-              target="_blank"
+            <Link
+              href={APP_INSTAGRAM_URL ?? ""}
               className={`p-1.5 items-center cursor-pointer ${textColorClass} hover:text-textHoverOnDark`}
             >
               <FaInstagram size={15} />
-            </a>
-            <a
-              href={APP_FACEBOOK_URL}
-              target="_blank"
+            </Link>
+            <Link
+              href={APP_FACEBOOK_URL ?? ""}
               className={`p-1.5 items-center cursor-pointer ${textColorClass} hover:text-textHoverOnDark`}
             >
               <LuFacebook size={15} />
-            </a>
-            <a
+            </Link>
+            <Link
               href={`mailto:${APP_SERVICE_EMAIL}`}
-              target="_blank"
               className={`p-1.5 items-center cursor-pointer ${textColorClass} hover:text-textHoverOnDark`}
             >
               <MdOutlineAlternateEmail size={15} />
-            </a>
-            <a
+            </Link>
+            <Link
               href={`tel:${APP_WHATSAPP_NUMBER}`}
               className={`p-1.5 items-center cursor-pointer ${textColorClass} hover:text-textHoverOnDark`}
             >
               <FiPhone size={15} />
-            </a>
+            </Link>
           </div>
           <div className="w-full inline-flex justify-start items-center">
             <Logo />

@@ -30,7 +30,7 @@ export default function AboutUs({
                 />
               )}
               <AnimatedImage
-                src={"/img/aboutus.png"}
+                src={aboutUs.image}
                 alt={"About Us Image"}
                 className={"block w-full sm:h-[250px] !h-[200px] md:hidden"}
               />

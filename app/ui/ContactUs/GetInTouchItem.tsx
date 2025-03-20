@@ -1,5 +1,6 @@
 import { MdAlternateEmail } from "react-icons/md";
 import React from "react";
+import Link from "next/link";
 
 export default function GetInTouchItem({
   title,
@@ -24,14 +25,12 @@ export default function GetInTouchItem({
         <div className="self-stretch text-[#595959] text-sm font-normal font-['Plus Jakarta Sans']">
           {description}
         </div>
-        <a
+        <Link
           href={link}
-          target="_blank"
-          rel="noopener noreferrer"
           className="self-stretch text-black text-sm font-semibold font-['Plus Jakarta Sans'] underline"
         >
           {value}
-        </a>
+        </Link>
       </div>
     </div>
   );

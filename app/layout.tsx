@@ -48,6 +48,12 @@ export const metadata: Metadata = {
       "24/7 emergency water damage restoration services in San Diego. Fast response, professional team, guaranteed results.",
     images: ["https://otterwaterrestoration.com/twitter-image.jpg"],
   },
+  icons: {
+    icon: {
+      url: "/icon.png",
+      type: "image/png",
+    },
+  },
 };
 
 const jsonLd = {

@@ -29,11 +29,13 @@ export default function AboutUs({
                   className={"justify-start items-center text-start"}
                 />
               )}
-              <AnimatedImage
-                src={aboutUs.image}
-                alt={"About Us Image"}
-                className={"block w-full sm:h-[250px] !h-[200px] md:hidden"}
-              />
+              <div className="relative block w-full sm:h-[250px] !h-[200px] md:hidden">
+                <AnimatedImage
+                  src={aboutUs.image}
+                  alt="About Us Image"
+                  className="object-cover"
+                />
+              </div>
               <div
                 className="w-full text-black text-sm font-normal font-['Plus Jakarta Sans'] tracking-tight"
                 dangerouslySetInnerHTML={{ __html: aboutUs.description }}

@@ -3,7 +3,6 @@ import GetInTouchItem from "@/app/ui/ContactUs/GetInTouchItem";
 import { MdAlternateEmail } from "react-icons/md";
 import React from "react";
 import { APP_PHONE_NUMBER, APP_SERVICE_EMAIL } from "@/app/constants";
-import { FaPhone } from "react-icons/fa";
 import { LuPhone } from "react-icons/lu";
 
 export default function GetInTouch() {

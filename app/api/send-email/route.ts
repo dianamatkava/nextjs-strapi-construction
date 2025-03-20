@@ -63,7 +63,7 @@ export async function POST(request: Request) {
       {
         status: 500,
         headers: { "Content-Type": "application/json" },
-      },
+      }
     );
   }
 
@@ -80,9 +80,9 @@ export async function POST(request: Request) {
     });
 
     const mailOptions = {
-      from: `"ALX Handyman" <${SMTP_SERVER_USERNAME}>`,
+      from: `"Otter Water" <${SMTP_SERVER_USERNAME}>`,
       to: email,
-      subject: `Thank you for contacting alxhandyman.com`,
+      subject: `Thank you for contacting Otter Water Restoration!`,
       html: `
       <p>Dear ${name},</p>
       <p>Thank you for contacting Otter Water Restoration. We have received your message and are currently reviewing your request.</p>
@@ -131,7 +131,7 @@ export async function POST(request: Request) {
       {
         status: 500,
         headers: { "Content-Type": "application/json" },
-      },
+      }
     );
   }
 
@@ -144,6 +144,6 @@ export async function POST(request: Request) {
     {
       status: 200,
       headers: { "Content-Type": "application/json" },
-    },
+    }
   );
 }

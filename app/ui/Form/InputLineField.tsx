@@ -5,7 +5,7 @@ const InputLineField = ({
   placeholder,
   name,
   type = "input",
-  required = true,
+  required,
   inputClassName = "",
   labelClassName = "",
   children,

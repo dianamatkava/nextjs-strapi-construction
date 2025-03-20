@@ -30,11 +30,13 @@ export default function AboutUs({
                   className={"justify-start items-center text-start"}
                 />
               )}
-              <ImageContainer
-                src={aboutUs.image}
-                alt={aboutUs.title}
-                className={"!h-[350px]"}
-              />
+              <div className="md:hidden w-full !h-[200px] md:block relative">
+                <ImageContainer
+                  src={aboutUs.image}
+                  alt={aboutUs.title}
+                  className={"!h-[200px]"}
+                />
+              </div>
               <div
                 className="w-full text-black text-sm font-normal font-['Plus Jakarta Sans'] tracking-tight"
                 dangerouslySetInnerHTML={{ __html: aboutUs.description }}
@@ -61,7 +63,7 @@ export default function AboutUs({
           </div>
         </div>
         <div className="hidden w-full md:w-1/2 md:block relative">
-          <AnimatedImage src={"/img/aboutus.png"} alt={"About Us Image"} />
+          <AnimatedImage src={aboutUs.image} alt={"About Us Image"} />
         </div>
       </div>
     </div>

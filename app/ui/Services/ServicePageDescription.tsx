@@ -1,7 +1,7 @@
-import HeaderH1 from "@/app/ui/Components/HeaderH1";
 import CTAGroup from "@/app/ui/Components/CTAGroup";
 import React from "react";
 import ImageContainer from "@/app/ui/Components/ImageContainer";
+import HeaderH1 from "../Components/HeaderH1";
 
 export default function ServicePageDescription({
   title,

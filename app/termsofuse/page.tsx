@@ -1,13 +1,13 @@
 "use client";
 import BackButton from "@/app/ui/Components/BackButton";
-import HeaderH1 from "@/app/ui/Components/HeaderH1";
+import HeaderH2 from "@/app/ui/Components/HeaderH2";
 import { APP_PHONE_NUMBER, APP_SERVICE_EMAIL } from "../constants";
 export default function TermsOfUse() {
   return (
     <div className="w-full h-full flex justify-center items-start flex-col pt-5 px-5 sm:px-16 py-8 gap-8">
       <BackButton />
       <div className="w-full max-w-4xl mx-auto">
-        <HeaderH1 title="Terms of Use" className="mb-8" />
+        <HeaderH2 title="Terms of Use" className="mb-8" />
 
         <div className="space-y-6 text-gray-700">
           <section>
@@ -94,6 +94,8 @@ export default function TermsOfUse() {
               Email: {APP_SERVICE_EMAIL}
               <br />
               Phone: {APP_PHONE_NUMBER}
+              <br />
+              Location: San Diego, CA
             </p>
           </section>
         </div>

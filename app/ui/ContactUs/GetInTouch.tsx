@@ -1,4 +1,4 @@
-import HeaderH1 from "@/app/ui/Components/HeaderH1";
+import HeaderH2 from "@/app/ui/Components/HeaderH2";
 import GetInTouchItem from "@/app/ui/ContactUs/GetInTouchItem";
 import { MdAlternateEmail } from "react-icons/md";
 import React from "react";
@@ -8,12 +8,13 @@ import { LuPhone } from "react-icons/lu";
 export default function GetInTouch() {
   return (
     <div className="w-full h-fit flex-col justify-start items-start gap-12 inline-flex py-5">
-      <div className="w-full max-w-[350px] h-fit flex-col justify-center items-start gap-4 inline-flex">
-        <HeaderH1 title={"Get in Touch"} />
+      <div className="w-full max-w-[500px] h-fit flex-col justify-center items-start gap-4 inline-flex">
+        <HeaderH2 title={"Get in Touch"} />
         <div className="text-[#595959] text-sm font-normal font-['Plus Jakarta Sans']">
-          We’re here to help with any questions or concerns about water damage,
-          restoration, or remodeling. Reach out by phone or email, and we’ll
-          guide you toward the best solutions for your property.
+          We're here to help with any questions or concerns about water damage,
+          restoration or remodeling. We operate in San Diego and surrounding
+          areas. Reach out by phone or email, and we'll guide you toward the
+          best solutions for your property.
         </div>
       </div>
       <div className="w-full h-fit justify-start items-start gap-12 inline-flex flex-wrap">

@@ -10,7 +10,7 @@ export default function ChooseUs() {
         </div>
         <div className="text-neutral-400 text-sm font-normal font-['Plus Jakarta Sans']">
           We provide you with a comprehensive assessment of water damages and
-          other repair services.
+          other repair services in San Diego area.
         </div>
       </div>
       <div className="w-full self-stretch justify-between items-start flex flex-wrap lg:flex-nowrap lg:inline-flex gap-12">

@@ -3,8 +3,8 @@ export const news = [
     id: 1,
     tag: "Article",
     title: "What to do if your home is flooded?",
-    date: "08 February 2024",
-    time: "12:45 AM",
+    date: "February 20, 2025",
+    time: "10:15 AM",
     image: "/img/news/IMG_3133.PNG",
     description:
       "Flooding in homes and businesses is becoming more common. Burst pipes, blockages, or appliance failures can cause serious damage. If not addressed quickly, water can seep into walls and floors, leading to mold growth, material deterioration, and health risks.",
@@ -72,15 +72,15 @@ export const news = [
     id: 2,
     tag: "Article",
     title: "What types of water damage does insurance cover?",
-    date: "17 March 2025",
-    time: "09:35 PM",
+    date: "March 6, 2025",
+    time: "02:45 PM",
     image: "/img/news/IMG_3137.PNG",
     description: "",
     body: [
       {
         id: 0,
         description:
-          "Homeowners often face situations where water damage causes serious harm to their property, but the insurance company denies their claim. To avoid unexpected expenses, it’s important to understand what situations are covered and in which cases a claim might be denied.",
+          "Homeowners often face situations where water damage causes serious harm to their property, but the insurance company denies their claim. To avoid unexpected expenses, it's important to understand what situations are covered and in which cases a claim might be denied.",
       },
       {
         id: 1,
@@ -92,7 +92,7 @@ export const news = [
         <li class="py-2">A household appliance malfunctions, causing flooding.</li>
         <li class="py-2">A sewer backup results in water damage.</li>
         <br>
-        Every insurance provider has specific terms, so it’s essential to review your policy details in advance!
+        Every insurance provider has specific terms, so it's essential to review your policy details in advance!
         `,
       },
       {
@@ -114,8 +114,8 @@ export const news = [
     id: 3,
     tag: "Article",
     title: "Common mistakes after flooding and how to avoid them",
-    date: "08 February 2024",
-    time: "12:45 AM",
+    date: "March 13, 2025",
+    time: "11:30 AM",
     image: "/img/news/IMG_3143.PNG",
     description: "",
     body: [
@@ -171,8 +171,8 @@ export const news = [
     id: 4,
     tag: "Article",
     title: "Why do new pipes leak?",
-    date: "17 March 2025",
-    time: "09:35 PM",
+    date: "March 20, 2025",
+    time: "09:15 AM",
     image: "/img/news/IMG_3152.PNG",
     description: "",
     body: [
@@ -196,8 +196,8 @@ export const news = [
     id: 5,
     tag: "Article",
     title: "How to remove mold at home: safe and effective methods",
-    date: "08 February 2024",
-    time: "12:45 AM",
+    date: "March 20, 2025",
+    time: "03:45 PM",
     image: "/img/news/IMG_3150.PNG",
     description: "",
     body: [

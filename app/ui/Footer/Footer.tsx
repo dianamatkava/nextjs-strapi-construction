@@ -41,6 +41,9 @@ export default function Footer({
               <div className="text-white flex-col justify-start items-start gap-4 inline-flex pt-5">
                 <Logo />
                 <div className="text-[#f5efe7] text-sm">{siteDescription}</div>
+                <div className="text-[#828181] text-sm">
+                  Serving in San Diego, CA
+                </div>
               </div>
               <div className="self-stretch h-[58px] justify-start items-center gap-5 inline-flex">
                 <div className="inline-flex justify-center items-center gap-4">
@@ -131,7 +134,7 @@ export default function Footer({
         </div>
         <div className="w-full inline-flex pt-4 pb-2.5 border-t border-neutral-700 justify-between items-center text-sm">
           <div className="text-[#e2e2e2] text-xs font-normal">
-            © 2025 All Rights Reserved
+            © 2025 All Rights Reserved | San Diego, CA
           </div>
           <div className="flex items-center gap-2">
             <Link

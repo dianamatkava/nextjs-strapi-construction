@@ -1,4 +1,4 @@
-import HeaderH1 from "@/app/ui/Components/HeaderH1";
+import HeaderH2 from "@/app/ui/Components/HeaderH2";
 import ContactForm from "@/app/ui/ContactUs/ContactForm";
 import Logo from "@/app/ui/Components/Logo";
 import GetInTouch from "@/app/ui/ContactUs/GetInTouch";
@@ -12,7 +12,7 @@ export default function ContactUs() {
       <div className="w-full max-w-[500px] h-full justify-center items-start gap-8 flex flex-col">
         <div className="w-full h-fit flex-col justify-center items-center gap-3 inline-flex">
           <Logo className="hidden sm:inline-flex" />
-          <HeaderH1
+          <HeaderH2
             title={"Otter Water is here to help!"}
             id={"contact"}
             className={"w-full text-center"}

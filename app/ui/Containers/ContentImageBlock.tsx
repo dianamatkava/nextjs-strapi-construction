@@ -1,4 +1,4 @@
-import HeaderH1 from "@/app/ui/Components/HeaderH1";
+import HeaderH2 from "@/app/ui/Components/HeaderH2";
 import React from "react";
 import AnimatedImage from "../Components/AnimatedImage";
 
@@ -16,7 +16,7 @@ export default function ContentImageBlock({
   return (
     <div className="w-full h-fit flex-col justify-start items-center gap-5 inline-flex">
       <div className="w-full flex-col justify-start items-center flex">
-        <HeaderH1
+        <HeaderH2
           title={title}
           className={"text-center items-center justify-center"}
         />

@@ -1,21 +1,34 @@
 import React from "react";
-import HeaderH1 from "@/app/ui/Components/HeaderH1";
+import HeaderH2 from "@/app/ui/Components/HeaderH2";
 import AchievementItem from "@/app/ui/Components/AchievementItem";
 import AnimatedImage from "@/app/ui/Components/AnimatedImage";
 import { aboutUs } from "@/app/data/aboutUs";
+import HeaderH1 from "../Components/HeaderH1";
 
-export default function AboutUs() {
+export default function AboutUs({
+  type = "section",
+}: {
+  type?: "page" | "section";
+}) {
   return (
     <div className="w-full full justify-center items-center gap-8 flex flex-col">
       <div className="w-full full justify-center items-center gap-8 inline-flex">
         <div className="w-full md:w-1/2 h-fit flex-col justify-start items-start gap-5 inline-flex">
           <div className="self-stretch h-fit flex-col justify-between items-start flex gap-10">
             <div className="self-stretch h-fit flex-col justify-start items-start gap-2 flex">
-              <HeaderH1
-                id={"about"}
-                title={aboutUs.title}
-                className={"justify-start items-center text-start"}
-              />
+              {type === "page" ? (
+                <HeaderH1
+                  id={"about"}
+                  title={aboutUs.title}
+                  className={"justify-start items-center text-start"}
+                />
+              ) : (
+                <HeaderH2
+                  id={"about"}
+                  title={aboutUs.title}
+                  className={"justify-start items-center text-start"}
+                />
+              )}
               <AnimatedImage
                 src={"/img/aboutus.png"}
                 alt={"About Us Image"}

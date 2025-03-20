@@ -1,6 +1,6 @@
 "use client";
 import React, { use, useState } from "react";
-import HeaderH1 from "@/app/ui/Components/HeaderH1";
+import HeaderH2 from "@/app/ui/Components/HeaderH2";
 import InputLineField from "@/app/ui/Form/InputLineField";
 import CTAPrimary from "@/app/ui/Components/CTAPrimary";
 import { MdOutlineMail } from "react-icons/md";
@@ -49,7 +49,7 @@ export default function FAQHeader() {
 
   return (
     <div className="w-fit flex-col justify-center items-start gap-5 inline-flex font-['Plus Jakarta Sans']">
-      <HeaderH1
+      <HeaderH2
         title={"Do you have any question about the service?"}
         className={"text-start"}
       />

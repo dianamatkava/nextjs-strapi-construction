@@ -1,4 +1,4 @@
-import HeaderH1 from "@/app/ui/Components/HeaderH1";
+import HeaderH2 from "@/app/ui/Components/HeaderH2";
 
 interface NewsPageContentBlockProps {
   id: string;

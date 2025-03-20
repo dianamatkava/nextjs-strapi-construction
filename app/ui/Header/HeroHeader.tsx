@@ -27,9 +27,9 @@ export default function HeroHeader({
           <div className="self-stretch flex-col justify-center items-center gap-8 sm:gap-12 flex">
             <div className="self-stretch flex-col justify-center items-center gap-12 flex">
               <div className="w-full h-full self-stretch flex flex-col justify-center items-center gap-5">
-                <div className="self-stretch text-center text-white text-4xl sm:text-6xl font-semibold font-['Plus Jakarta Sans']">
+                <h1 className="self-stretch text-center text-white text-4xl sm:text-6xl font-semibold font-['Plus Jakarta Sans']">
                   {siteSlogan}
-                </div>
+                </h1>
                 <div className="max-w-[600px] text-center text-[#e4e4e4] text-sm font-medium font-['Plus Jakarta Sans']">
                   {siteDescription}
                 </div>

@@ -1,5 +1,5 @@
 import SectionHeader from "@/app/ui/Components/SectionHeader";
-import HeaderH1 from "@/app/ui/Components/HeaderH1";
+import HeaderH2 from "@/app/ui/Components/HeaderH2";
 
 export default function ServicePreview() {
   return (
@@ -8,7 +8,7 @@ export default function ServicePreview() {
       <div className="self-stretch justify-start items-center gap-4 inline-flex">
         <div className="grow shrink basis-0 h-fit flex flex-col sm:flex-row justify-between items-center gap-6">
           <div className="sm:w-1/2">
-            <HeaderH1
+            <HeaderH2
               id={"whoAmI"}
               title={"Get comprehensive Solution for Repair Services"}
               className={"text-start"}

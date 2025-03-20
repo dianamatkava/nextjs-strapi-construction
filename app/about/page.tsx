@@ -10,7 +10,7 @@ export default function Page() {
   const betweenComponents = [ChooseUs];
   return (
     <div className={"w-full flex flex-col gap-12"}>
-      <AboutUs />
+      <AboutUs type="page" />
       <Collaborators />
       {aboutUs.contentText.map((item: any, idx: number) => (
         <React.Fragment key={idx}>

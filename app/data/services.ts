@@ -5,7 +5,7 @@ export const services = [
     description:
       "We use advanced equipment to quickly extract water and dry out your property to prevent further damage and mold growth.",
     detailedDescription:
-      "We specialize in rapid water extraction and thorough drying to protect your home or business from extensive damage. Our trained technicians use professional-grade pumps, air movers, and dehumidifiers to remove standing water, reduce humidity, and dry out hidden moisture. By carefully assessing each affected area, we help prevent mold growth and structural issues down the line. Our goal is to restore your property to a safe, comfortable condition as quickly as possible—allowing you to get back to normal with minimal disruption. If you need fast, reliable water damage restoration, don’t hesitate to contact us.",
+      "Operating throughout San Diego area, we specialize in rapid water extraction and thorough drying to protect your home or business from extensive damage. Our trained technicians use professional-grade pumps, air movers, and dehumidifiers to remove standing water, reduce humidity, and dry out hidden moisture. By carefully assessing each affected area, we help prevent mold growth and structural issues down the line. Our goal is to restore your property to a safe, comfortable condition as quickly as possible—allowing you to get back to normal with minimal disruption. If you need fast, reliable water damage restoration, don't hesitate to contact us.",
     image: "/img/services/IMG_2775.PNG",
     contentText: [
       {
@@ -27,7 +27,7 @@ export const services = [
     description:
       "Our team performs a thorough inspection to identify all affected areas, remove damaged materials, and ensure a safe, clean space.",
     detailedDescription:
-      "We begin by thoroughly assessing the affected areas to pinpoint hidden damage and potential hazards. Our technicians then remove debris, sanitize surfaces, and address any structural concerns. By focusing on both visible and concealed issues, we help prevent further harm, reduce health risks, and prepare your property for restoration—all while keeping the process as efficient and hassle-free as possible.",
+      "Serving the greater San Diego area, we begin by thoroughly assessing the affected areas to pinpoint hidden damage and potential hazards. Our technicians then remove debris, sanitize surfaces, and address any structural concerns. By focusing on both visible and concealed issues, we help prevent further harm, reduce health risks, and prepare your property for restoration—all while keeping the process as efficient and hassle-free as possible.",
     contentText: [
       {
         title: "Damage Assessment & Cleanup",
@@ -36,7 +36,7 @@ export const services = [
         body: [
           "After water removal, it's essential to thoroughly assess the extent of the damage to identify all affected areas. Our team conducts a detailed inspection to evaluate the damage and determine which materials, such as waterlogged carpets, drywall, insulation, and furniture, need to be removed. This ensures no hidden issues remain that could impact the restoration process.",
           "Once the damage is assessed, specialists carefully remove damaged materials to prevent further harm and contamination of air quality. We ensure that everything is safely removed and disposed of, leaving your space clean and ready for the next phase of restoration. Our cleanup process also includes sanitizing and disinfecting the area to prevent bacteria and mold growth.",
-          "With our team’s attention to detail, we ensure that every part of your property is thoroughly inspected and cleaned, guaranteeing a safe, clean environment for the subsequent repair and restoration stages.",
+          "With our team's attention to detail, we ensure that every part of your property is thoroughly inspected and cleaned, guaranteeing a safe, clean environment for the subsequent repair and restoration stages.",
         ],
         image: "/img/services/IMG_2781.PNG",
       },
@@ -49,7 +49,7 @@ export const services = [
     description:
       "From minor repairs to major rebuilding, we restore your property to its original condition—or even better!",
     detailedDescription:
-      "Our Full Restoration & Repairs service revitalizes your property from the ground up. Our experienced team manages everything from structural fixes to cosmetic enhancements, ensuring every detail is repaired to the highest standard. Trust us to restore your space to a safe and beautiful condition, with quality craftsmanship and reliable service.",
+      "As Southern California's trusted restoration experts, our Full Restoration & Repairs service revitalizes your property from the ground up. Our experienced team manages everything from structural fixes to cosmetic enhancements, ensuring every detail is repaired to the highest standard. Trust us to restore your space to a safe and beautiful condition, with quality craftsmanship and reliable service.",
     contentText: [
       {
         title: "Full Restoration & Repairs",
@@ -57,7 +57,7 @@ export const services = [
           "From minor repairs to major rebuilding, we restore your property to its original condition—or even better!",
         body: [
           "Full restoration and repairs are the final stages of the recovery process, where we bring your property back to its original condition or improve it. Our team handles everything from minor repairs to major rebuilding projects, ensuring every detail of your home or business is restored with care.",
-          "We begin by thoroughly assessing your property’s structural integrity, checking walls, floors, ceilings, and other affected areas. After the evaluation, our specialists carry out the necessary repairs, using high-quality materials to restore your property safely and reliably. Whether it's replacing drywall, repairing flooring, or rebuilding large sections, we pay close attention to every detail.",
+          "We begin by thoroughly assessing your property's structural integrity, checking walls, floors, ceilings, and other affected areas. After the evaluation, our specialists carry out the necessary repairs, using high-quality materials to restore your property safely and reliably. Whether it's replacing drywall, repairing flooring, or rebuilding large sections, we pay close attention to every detail.",
           "During the restoration process, we also offer enhancements to improve the functionality and appearance of your space. We provide solutions that not only restore your property but also make it more comfortable, efficient, and visually appealing.",
         ],
         image: "/img/services/IMG_2799.PNG",

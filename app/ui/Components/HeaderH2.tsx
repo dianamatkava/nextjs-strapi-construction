@@ -1,4 +1,4 @@
-export default function HeaderH1({
+export default function HeaderH2({
   title,
   className,
   id,
@@ -15,14 +15,14 @@ export default function HeaderH1({
       }
       id={id}
     >
-      <h1
+      <h2
         className={
           "w-fit text-center text-black font-['Plus Jakarta Sans'] leading-[43px] " +
           `${className}`
         }
       >
         {title}
-      </h1>
+      </h2>
     </div>
   );
 }

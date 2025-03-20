@@ -1,6 +1,7 @@
 import ImageContainer from "@/app/ui/Components/ImageContainer";
 import SectionHeader from "@/app/ui/Components/SectionHeader";
-import HeaderH1 from "@/app/ui/Components/HeaderH1";
+import HeaderH2 from "@/app/ui/Components/HeaderH2";
+import HeaderH1 from "../Components/HeaderH1";
 
 export default function NewsPageHeader({
   title,

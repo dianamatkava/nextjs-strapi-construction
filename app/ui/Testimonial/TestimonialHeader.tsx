@@ -1,5 +1,5 @@
 import SectionHeader from "@/app/ui/Components/SectionHeader";
-import HeaderH1 from "@/app/ui/Components/HeaderH1";
+import HeaderH2 from "@/app/ui/Components/HeaderH2";
 
 export default function TestimonialHeader() {
   return (
@@ -8,7 +8,7 @@ export default function TestimonialHeader() {
         <SectionHeader name={"Testimonial"} />
       </div>
       <div className="self-stretch flex-col justify-center items-center gap-5 flex">
-        <HeaderH1
+        <HeaderH2
           id={"testimonial"}
           title={"Your One-Stop Solution for All Repairs"}
           className={"justify-center items-center"}

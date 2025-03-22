@@ -18,6 +18,8 @@ export default function ImageContainer({
           src={src}
           alt={alt}
           fill
+          sizes="(max-width: 768px) 100vw, 50vw"
+          priority
           style={{ objectFit: "cover" }}
           className="rounded-[inherit]"
         />

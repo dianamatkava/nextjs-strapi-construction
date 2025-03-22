@@ -1,3 +1,4 @@
+"use client";
 import AllstateLogo from "@/app/assets/svg/Allstate-Logo.svg";
 import ChubbLogo from "@/app/assets/svg/Chubb.svg";
 import LibertyLogo from "@/app/assets/svg/Liberty.svg";

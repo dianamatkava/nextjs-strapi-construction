@@ -47,30 +47,40 @@ export default function Footer({
               </div>
               <div className="self-stretch h-[58px] justify-start items-center gap-5 inline-flex">
                 <div className="inline-flex justify-center items-center gap-4">
-                  <a
-                    href={APP_INSTAGRAM_URL}
+                  <Link
+                    href={
+                      APP_INSTAGRAM_URL ||
+                      "https://www.instagram.com/otter_water_restoration"
+                    }
+                    target="_blank"
                     className="justify-start items-start rounded-[50px] border border-[#2a2a2a] bg-white/5 p-3 text-[#828181] cursor-pointer hover:text-[#f5efe7] hover:border-[#A4A2A0] hover:bg-white/10"
                   >
                     <FiInstagram width={24} />
-                  </a>
-                  <a
-                    href={APP_FACEBOOK_URL}
+                  </Link>
+                  <Link
+                    href={
+                      APP_FACEBOOK_URL ||
+                      "https://www.facebook.com/profile.php?id=61572557857171"
+                    }
+                    target="_blank"
                     className="justify-start items-start rounded-[50px] border border-[#2a2a2a] bg-white/5 p-3 text-[#828181] cursor-pointer hover:text-[#f5efe7] hover:border-[#A4A2A0] hover:bg-white/10"
                   >
                     <FaFacebookF width={24} />
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href={`mailto:${APP_SERVICE_EMAIL}`}
+                    target="_blank"
                     className="justify-start items-start rounded-[50px] border border-[#2a2a2a] bg-white/5 p-3 text-[#828181] cursor-pointer hover:text-[#f5efe7] hover:border-[#A4A2A0] hover:bg-white/10"
                   >
                     <MdOutlineAlternateEmail width={24} />
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href={`tel:${APP_PHONE_NUMBER}`}
+                    target="_blank"
                     className="justify-start items-start rounded-[50px] border border-[#2a2a2a] bg-white/5 p-3 text-[#828181] cursor-pointer hover:text-[#f5efe7] hover:border-[#A4A2A0] hover:bg-white/10"
                   >
                     <FiPhone width={24} />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

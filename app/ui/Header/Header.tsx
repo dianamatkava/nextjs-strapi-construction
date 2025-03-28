@@ -45,24 +45,28 @@ export default function Header({
           <div className="hidden w-full md:inline-flex items-center">
             <Link
               href={APP_INSTAGRAM_URL ?? ""}
+              target="_blank"
               className={`p-1.5 items-center cursor-pointer ${textColorClass} hover:text-textHoverOnDark`}
             >
               <FaInstagram size={15} />
             </Link>
             <Link
               href={APP_FACEBOOK_URL ?? ""}
+              target="_blank"
               className={`p-1.5 items-center cursor-pointer ${textColorClass} hover:text-textHoverOnDark`}
             >
               <LuFacebook size={15} />
             </Link>
             <Link
               href={`mailto:${APP_SERVICE_EMAIL}`}
+              target="_blank"
               className={`p-1.5 items-center cursor-pointer ${textColorClass} hover:text-textHoverOnDark`}
             >
               <MdOutlineAlternateEmail size={15} />
             </Link>
             <Link
               href={`tel:${APP_WHATSAPP_NUMBER}`}
+              target="_blank"
               className={`p-1.5 items-center cursor-pointer ${textColorClass} hover:text-textHoverOnDark`}
             >
               <FiPhone size={15} />

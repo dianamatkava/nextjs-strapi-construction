@@ -5,6 +5,7 @@ import { global } from "@/app/data/globals";
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import Script from "next/script";
+import { APP_FACEBOOK_URL, APP_INSTAGRAM_URL } from "./constants";
 
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"] });
 
@@ -15,8 +16,6 @@ export const metadata: Metadata = {
     "Professional water damage restoration services in San Diego. 24/7 emergency response, water removal, drying, and full restoration services.",
   keywords:
     "water damage restoration, water removal, flood cleanup, emergency water services, San Diego",
-  viewport: "width=device-width, initial-scale=1, maximum-scale=1",
-  themeColor: "#ffffff",
   alternates: {
     canonical: "https://otterwaterrestoration.com",
   },
@@ -49,10 +48,12 @@ export const metadata: Metadata = {
     images: ["https://otterwaterrestoration.com/twitter-image.jpg"],
   },
   icons: {
-    icon: {
-      url: "/favicon.ico",
-      type: "image/png",
-    },
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png", sizes: "32x32" },
+    ],
+    apple: [{ url: "/icon.png", sizes: "180x180", type: "image/png" }],
+    shortcut: [{ url: "/favicon.ico" }],
   },
 };
 
@@ -88,10 +89,7 @@ const jsonLd = {
     opens: "00:00",
     closes: "23:59",
   },
-  sameAs: [
-    "https://www.facebook.com/otterwaterrestoration",
-    "https://www.instagram.com/otterwaterrestoration",
-  ],
+  sameAs: [APP_FACEBOOK_URL, APP_INSTAGRAM_URL],
 };
 
 export default function RootLayout({

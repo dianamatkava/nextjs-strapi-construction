@@ -22,7 +22,6 @@ export default function AnimatedImage({
         scale: { delay: 0.2, duration: 1 },
         ease: "easeInOut",
       }}
-      viewport={{ once: false, amount: 0.5 }}
     >
       <ImageContainer
         src={src}

@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: {
-      url: "/icon.png",
+      url: "/favicon.ico",
       type: "image/png",
     },
   },
@@ -107,6 +107,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <link rel="icon" href="/favicon.ico" />
       </head>
       <body className={`${plusJakartaSans.className} antialiased`}>
         {/*<CustomCursor/>*/}

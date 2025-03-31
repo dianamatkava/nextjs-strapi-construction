@@ -1,5 +1,8 @@
-import TestimonialHeader from "@/app/ui/Testimonial/TestimonialHeader";
-import Review from "@/app/ui/Testimonial/Review";
+"use client";
+import React, { useState } from "react";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import Review from "./Review";
+import TestimonialHeader from "./TestimonialHeader";
 
 const reviews = [
   {
@@ -95,21 +98,59 @@ const reviews = [
 ];
 
 export default function Testimonial() {
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const itemWidth = 420;
+
+  const scrollLeft = () => {
+    setScrollPosition((prev) => Math.min(prev + itemWidth, 0));
+  };
+
+  const scrollRight = () => {
+    const maxScroll = -(reviews.length * itemWidth - window.innerWidth);
+    setScrollPosition((prev) => Math.max(prev - itemWidth, maxScroll));
+  };
+
   return (
-    <div className="w-full h-fit flex-col justify-start items-center gap-4 inline-flex">
+    <div className="w-full flex-col justify-start items-center gap-8 inline-flex">
       <TestimonialHeader />
-      <div className="w-full h-fit justify-start items-center gap-4 inline-flex overflow-hidden">
-        <div className="w-full h-fit justify-start items-center gap-4 inline-flex animate-marquee">
-          {reviews.map((review) => (
-            <Review
-              key={review.id}
-              name={review.name}
-              review={review.review}
-              rating={review.rating}
-              image={review.image}
-              service={review.service}
-            />
-          ))}
+      <div className="w-full relative">
+        {/* Navigation Buttons */}
+        <button
+          onClick={scrollLeft}
+          className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-black/20 hover:bg-black/40 text-white p-3 rounded-full transition-all"
+          disabled={scrollPosition === 0}
+        >
+          <FaChevronLeft size={20} />
+        </button>
+        <button
+          onClick={scrollRight}
+          className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-black/20 hover:bg-black/40 text-white p-3 rounded-full transition-all"
+        >
+          <FaChevronRight size={20} />
+        </button>
+
+        {/* Testimonials Container */}
+        <div className="w-full overflow-hidden">
+          <div
+            className="w-full h-fit justify-start items-center gap-4 inline-flex"
+            style={{
+              transform: `translateX(${scrollPosition}px)`,
+              transition: "transform 0.5s ease-in-out",
+            }}
+          >
+            <div className="w-full h-fit justify-start items-center gap-4 inline-flex">
+              {reviews.map((review) => (
+                <Review
+                  key={review.id}
+                  name={review.name}
+                  review={review.review}
+                  rating={review.rating}
+                  image={review.image}
+                  service={review.service}
+                />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </div>

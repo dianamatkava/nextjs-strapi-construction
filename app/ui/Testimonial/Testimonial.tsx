@@ -9,7 +9,7 @@ const reviews = [
     id: 1,
     name: "Alice Thompson",
     review:
-      "I had severe water damage in my basement, and the team fixed everything quickly. I’m extremely satisfied with the results!",
+      "I had severe water damage in my basement, and the team fixed everything quickly. I'm extremely satisfied with the results!",
     rating: 5,
     service: "Water Damage Restoration",
     image: "/images/testimonial/alice-thompson.jpg",
@@ -18,7 +18,7 @@ const reviews = [
     id: 2,
     name: "Brian Hernandez",
     review:
-      "Their prompt response saved my living room carpet from a leak that could’ve ruined the entire floor. Highly recommend!",
+      "Their prompt response saved my living room carpet from a leak that could've ruined the entire floor. Highly recommend!",
     rating: 5,
     service: "Leak Detection & Repair",
     image: "/images/testimonial/brian-hernandez.jpg",
@@ -99,14 +99,14 @@ const reviews = [
 
 export default function Testimonial() {
   const [scrollPosition, setScrollPosition] = useState(0);
-  const itemWidth = 420;
+  const itemWidth = 19; // rem
 
   const scrollLeft = () => {
     setScrollPosition((prev) => Math.min(prev + itemWidth, 0));
   };
 
   const scrollRight = () => {
-    const maxScroll = -(reviews.length * itemWidth - window.innerWidth);
+    const maxScroll = -(reviews.length * itemWidth - window.innerWidth / 10);
     setScrollPosition((prev) => Math.max(prev - itemWidth, maxScroll));
   };
 
@@ -134,7 +134,7 @@ export default function Testimonial() {
           <div
             className="w-full h-fit justify-start items-center gap-4 inline-flex"
             style={{
-              transform: `translateX(${scrollPosition}px)`,
+              transform: `translateX(${scrollPosition}rem)`,
               transition: "transform 0.5s ease-in-out",
             }}
           >

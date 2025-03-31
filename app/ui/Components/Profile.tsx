@@ -11,12 +11,12 @@ export default function Profile({
 
   return (
     <div className="justify-start items-center gap-3 inline-flex">
-      <div
-        className={
-          "w-[50px] h-[50px] flex justify-center items-center bg-[#d9d9d9] rounded-full"
-        }
-      >
-        <div className="text-white text-xl font-bold">{initial}</div>
+      <div className="w-12 h-12 flex-shrink-0 relative">
+        <div className="w-full h-full bg-[#d9d9d9] rounded-full flex items-center justify-center">
+          <span className="text-white text-md font-bold absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+            {initial}
+          </span>
+        </div>
       </div>
       <div className="flex-col justify-start items-start gap-0.5 inline-flex">
         <div className="w-full justify-center items-center gap-3 inline-flex">

@@ -15,12 +15,12 @@ export default function Review({
   service: string;
 }) {
   return (
-    <div className="w-fit h-fit p-5 rounded-md border border-[#eaeaea] flex-col justify-center items-start gap-5 inline-flex">
-      <div className="justify-start items-center gap-5 inline-flex">
+    <div className="w-[22rem] h-fit p-3 rounded-md border border-[#eaeaea] flex-col justify-center items-start gap-3 inline-flex">
+      <div className="justify-start items-center gap-3 inline-flex">
         <Profile name={name} title={service} />
         <StartRating rating={rating} />
       </div>
-      <div className="w-[350px] text-black text-sm font-normal font-['Plus Jakarta Sans'] tracking-tight">
+      <div className="w-fit text-black text-sm font-normal font-['Plus Jakarta Sans'] tracking-tight">
         {review}
       </div>
     </div>

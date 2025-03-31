@@ -4,8 +4,8 @@ export default function StartRating({ rating }: { rating: number }) {
       {Array.from({ length: rating }).map((_, index) => (
         <div data-svg-wrapper key={index}>
           <svg
-            width="22"
-            height="21"
+            width="18"
+            height="18"
             viewBox="0 0 22 21"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -20,8 +20,8 @@ export default function StartRating({ rating }: { rating: number }) {
       {Array.from({ length: 5 - rating }).map((_, index) => (
         <div data-svg-wrapper key={5 - index}>
           <svg
-            width="22"
-            height="21"
+            width="18"
+            height="18"
             viewBox="0 0 22 21"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"

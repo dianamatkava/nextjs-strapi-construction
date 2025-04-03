@@ -6,6 +6,7 @@ import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import Script from "next/script";
 import { APP_FACEBOOK_URL, APP_INSTAGRAM_URL } from "./constants";
+import CookieConsent from "./ui/Components/CookieConsent";
 
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"] });
 
@@ -115,6 +116,7 @@ export default function RootLayout({
           siteReview={global.siteReview}
         />
         {children}
+        <CookieConsent />
         <Footer siteDescription={global.siteDescription} />
       </body>
     </html>

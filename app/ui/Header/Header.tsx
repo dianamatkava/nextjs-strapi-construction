@@ -3,7 +3,6 @@
 import Logo from "@/app/ui/Components/Logo";
 import { LuFacebook } from "react-icons/lu";
 import { FaInstagram } from "react-icons/fa";
-import { FaWhatsapp } from "react-icons/fa6";
 import { FiPhone } from "react-icons/fi";
 import Link from "next/link";
 import { usePathname } from "next/navigation";

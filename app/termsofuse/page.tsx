@@ -1,4 +1,3 @@
-"use client";
 import BackButton from "@/app/ui/Components/BackButton";
 import HeaderH2 from "@/app/ui/Components/HeaderH2";
 import { APP_PHONE_NUMBER, APP_SERVICE_EMAIL } from "../constants";

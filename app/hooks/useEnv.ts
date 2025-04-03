@@ -5,6 +5,8 @@ import {
   APP_PHONE_NUMBER,
   APP_INSTAGRAM_URL,
   APP_FACEBOOK_URL,
+  GOOGLETAG_ANALYTICS_ID,
+  APP_DEBUG,
 } from "@/app/constants";
 
 export function useEnv() {
@@ -13,6 +15,8 @@ export function useEnv() {
     phoneNumber: "",
     instagramUrl: "",
     facebookUrl: "",
+    googleTagAnalyticsId: "",
+    debug: true,
   });
 
   useEffect(() => {
@@ -21,6 +25,8 @@ export function useEnv() {
       phoneNumber: APP_PHONE_NUMBER || "",
       instagramUrl: APP_INSTAGRAM_URL || "",
       facebookUrl: APP_FACEBOOK_URL || "",
+      googleTagAnalyticsId: GOOGLETAG_ANALYTICS_ID || "",
+      debug: APP_DEBUG,
     };
     setEnv(values);
   }, []);

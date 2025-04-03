@@ -19,12 +19,18 @@ export default function CookieConsent() {
     localStorage.setItem("cookie-consent", "all");
     setConsentType("all");
     setShowConsent(false);
+    window.dispatchEvent(
+      new CustomEvent("cookieConsentChanged", { detail: "all" })
+    );
   };
 
   const acceptEssential = () => {
     localStorage.setItem("cookie-consent", "essential");
     setConsentType("essential");
     setShowConsent(false);
+    window.dispatchEvent(
+      new CustomEvent("cookieConsentChanged", { detail: "essential" })
+    );
   };
 
   if (!showConsent) return null;

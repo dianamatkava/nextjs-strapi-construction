@@ -7,6 +7,7 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import Script from "next/script";
 import { APP_FACEBOOK_URL, APP_INSTAGRAM_URL } from "./constants";
 import CookieConsent from "./ui/Components/CookieConsent";
+import GoogleAnalytics from "./ui/Components/GoogleAnalytics";
 
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"] });
 
@@ -107,6 +108,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <link rel="icon" href="/favicon.ico" />
+        <GoogleAnalytics />
       </head>
       <body className={`${plusJakartaSans.className} antialiased`}>
         {/*<CustomCursor/>*/}

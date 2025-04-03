@@ -1,3 +1,5 @@
+"use client";
+
 import { FiInstagram, FiPhone } from "react-icons/fi";
 import { MdOutlineAlternateEmail } from "react-icons/md";
 import Link from "next/link";
@@ -7,18 +9,14 @@ import { FaFacebookF } from "react-icons/fa";
 import Image from "next/image";
 import CTAGroup from "@/app/ui/Components/CTAGroup";
 import { services } from "@/app/data/services";
-import {
-  APP_FACEBOOK_URL,
-  APP_INSTAGRAM_URL,
-  APP_PHONE_NUMBER,
-  APP_SERVICE_EMAIL,
-} from "@/app/constants";
+import { useEnv } from "@/app/hooks/useEnv";
 
 export default function Footer({
   siteDescription,
 }: {
   siteDescription: string;
 }) {
+  const env = useEnv();
   return (
     <div className="h-full bg-[#0e1518]/85 relative w-full sm:w-[calc(100%-2rem)] from-black via-black to-black m-0 sm:mx-4 sm:pt-[62px] sm:rounded-tl-3xl sm:rounded-tr-3xl flex-col justify-start items-center gap-3 inline-flex font-['Plus Jakarta Sans']">
       <Image
@@ -48,34 +46,28 @@ export default function Footer({
               <div className="self-stretch h-[58px] justify-start items-center gap-5 inline-flex">
                 <div className="inline-flex justify-center items-center gap-4">
                   <Link
-                    href={
-                      APP_INSTAGRAM_URL ||
-                      "https://www.instagram.com/otter_water_restoration"
-                    }
+                    href={env.instagramUrl || ""}
                     target="_blank"
                     className="justify-start items-start rounded-[50px] border border-[#2a2a2a] bg-white/5 p-3 text-[#828181] cursor-pointer hover:text-[#f5efe7] hover:border-[#A4A2A0] hover:bg-white/10"
                   >
                     <FiInstagram width={24} />
                   </Link>
                   <Link
-                    href={
-                      APP_FACEBOOK_URL ||
-                      "https://www.facebook.com/profile.php?id=61572557857171"
-                    }
+                    href={env.facebookUrl || ""}
                     target="_blank"
                     className="justify-start items-start rounded-[50px] border border-[#2a2a2a] bg-white/5 p-3 text-[#828181] cursor-pointer hover:text-[#f5efe7] hover:border-[#A4A2A0] hover:bg-white/10"
                   >
                     <FaFacebookF width={24} />
                   </Link>
                   <Link
-                    href={`mailto:${APP_SERVICE_EMAIL}`}
+                    href={`mailto:${env.serviceEmail}`}
                     target="_blank"
                     className="justify-start items-start rounded-[50px] border border-[#2a2a2a] bg-white/5 p-3 text-[#828181] cursor-pointer hover:text-[#f5efe7] hover:border-[#A4A2A0] hover:bg-white/10"
                   >
                     <MdOutlineAlternateEmail width={24} />
                   </Link>
                   <Link
-                    href={`tel:${APP_PHONE_NUMBER}`}
+                    href={`tel:${env.phoneNumber}`}
                     target="_blank"
                     className="justify-start items-start rounded-[50px] border border-[#2a2a2a] bg-white/5 p-3 text-[#828181] cursor-pointer hover:text-[#f5efe7] hover:border-[#A4A2A0] hover:bg-white/10"
                   >

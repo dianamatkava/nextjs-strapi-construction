@@ -2,10 +2,10 @@ import HeaderH2 from "@/app/ui/Components/HeaderH2";
 import GetInTouchItem from "@/app/ui/ContactUs/GetInTouchItem";
 import { MdAlternateEmail } from "react-icons/md";
 import React from "react";
-import { APP_PHONE_NUMBER, APP_SERVICE_EMAIL } from "@/app/constants";
 import { LuPhone } from "react-icons/lu";
-
+import { useEnv } from "@/app/hooks/useEnv";
 export default function GetInTouch() {
+  const env = useEnv();
   return (
     <div className="w-full h-fit flex-col justify-start items-start gap-12 inline-flex py-5">
       <div className="w-full max-w-[500px] h-fit flex-col justify-center items-start gap-4 inline-flex">
@@ -19,20 +19,20 @@ export default function GetInTouch() {
       </div>
       <div className="w-full h-fit justify-start items-start gap-12 inline-flex flex-wrap">
         <GetInTouchItem
-          link={`tel:${APP_PHONE_NUMBER}`}
+          link={`tel:${env.phoneNumber}`}
           title={"Call us"}
           description={"Mon-Fri from 8am to 5pm"}
-          value={APP_PHONE_NUMBER || ""}
+          value={env.phoneNumber || ""}
         >
           <div className="w-fit flex justify-center items-center p-1 border rounded-md">
             <LuPhone size={14} />
           </div>
         </GetInTouchItem>
         <GetInTouchItem
-          link={`mailto:${APP_SERVICE_EMAIL}`}
+          link={`mailto:${env.serviceEmail}`}
           title={"Chat to us"}
           description={"Our friendly team is here to help. "}
-          value={APP_SERVICE_EMAIL || ""}
+          value={env.serviceEmail || ""}
         >
           <div className="w-fit flex justify-center items-center p-1 border rounded-md">
             <MdAlternateEmail size={14} />
@@ -41,7 +41,7 @@ export default function GetInTouch() {
         {/* <GetInTouchItem
           title={"Visit us"}
           description={"Mon-Fri from 8am to 5pm"}
-          value={APP_PHONE_NUMBER || ""}
+          value={env.phoneNumber || ""}
         >
           <div className="w-fit flex justify-center items-center p-1 border rounded-md">
             <MdAlternateEmail size={14} />

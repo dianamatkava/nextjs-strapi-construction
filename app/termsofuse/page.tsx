@@ -1,7 +1,9 @@
+"use client";
+import { useEnv } from "@/app/hooks/useEnv";
 import BackButton from "@/app/ui/Components/BackButton";
 import HeaderH2 from "@/app/ui/Components/HeaderH2";
-import { APP_PHONE_NUMBER, APP_SERVICE_EMAIL } from "../constants";
 export default function TermsOfUse() {
+  const env = useEnv();
   return (
     <div className="w-full h-full flex justify-center items-start flex-col pt-5 px-5 sm:px-16 py-8 gap-8">
       <BackButton />
@@ -90,9 +92,9 @@ export default function TermsOfUse() {
               us at:
             </p>
             <p className="mt-2">
-              Email: {APP_SERVICE_EMAIL}
+              Email: {env.serviceEmail}
               <br />
-              Phone: {APP_PHONE_NUMBER}
+              Phone: {env.phoneNumber}
               <br />
               Location: San Diego, CA
             </p>

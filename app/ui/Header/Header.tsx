@@ -1,5 +1,5 @@
 "use client";
-
+import { useEnv } from "@/app/hooks/useEnv";
 import Logo from "@/app/ui/Components/Logo";
 import { LuFacebook } from "react-icons/lu";
 import { FaInstagram } from "react-icons/fa";
@@ -30,6 +30,7 @@ export default function Header({
 }: {
   primaryColor?: string;
 }) {
+  const env = useEnv();
   const [isNavOpen, setIsNavOpen] = useState(false);
   const textColorClass = `text-${primaryColor}`;
   const bgColorClass = `bg-${primaryColor}`;
@@ -43,28 +44,28 @@ export default function Header({
         <div className="w-full inline-flex">
           <div className="hidden w-full md:inline-flex items-center">
             <Link
-              href={APP_INSTAGRAM_URL ?? ""}
+              href={env.instagramUrl ?? ""}
               target="_blank"
               className={`p-1.5 items-center cursor-pointer ${textColorClass} hover:text-textHoverOnDark`}
             >
               <FaInstagram size={15} />
             </Link>
             <Link
-              href={APP_FACEBOOK_URL ?? ""}
+              href={env.facebookUrl ?? ""}
               target="_blank"
               className={`p-1.5 items-center cursor-pointer ${textColorClass} hover:text-textHoverOnDark`}
             >
               <LuFacebook size={15} />
             </Link>
             <Link
-              href={`mailto:${APP_SERVICE_EMAIL}`}
+              href={`mailto:${env.serviceEmail}`}
               target="_blank"
               className={`p-1.5 items-center cursor-pointer ${textColorClass} hover:text-textHoverOnDark`}
             >
               <MdOutlineAlternateEmail size={15} />
             </Link>
             <Link
-              href={`tel:${APP_WHATSAPP_NUMBER}`}
+              href={`tel:${env.phoneNumber}`}
               target="_blank"
               className={`p-1.5 items-center cursor-pointer ${textColorClass} hover:text-textHoverOnDark`}
             >

@@ -1,3 +1,4 @@
+"use client";
 import HeaderH2 from "@/app/ui/Components/HeaderH2";
 import GetInTouchItem from "@/app/ui/ContactUs/GetInTouchItem";
 import { MdAlternateEmail } from "react-icons/md";

@@ -15,8 +15,8 @@ export default function Review({
   service: string;
 }) {
   return (
-    <div className="w-[22rem] h-fit p-3 rounded-md border border-[#eaeaea] flex-col justify-center items-start gap-3 inline-flex">
-      <div className="justify-start items-center gap-3 inline-flex">
+    <div className="review-card w-[22rem] h-fit min-h-[11rem] p-3 rounded-md border border-[#eaeaea] flex-col justify-center items-start gap-3 inline-flex">
+      <div className="w-full justify-between items-center gap-3 inline-flex">
         <Profile name={name} title={service} />
         <StartRating rating={rating} />
       </div>

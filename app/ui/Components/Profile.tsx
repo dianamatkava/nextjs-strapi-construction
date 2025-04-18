@@ -18,7 +18,7 @@ export default function Profile({
           </span>
         </div>
       </div>
-      <div className="flex-col justify-start items-start gap-0.5 inline-flex">
+      <div className="flex-col justify-start items-start gap-0 inline-flex">
         <div className="w-full justify-center items-center gap-3 inline-flex">
           <div
             className={
@@ -32,7 +32,7 @@ export default function Profile({
         <div
           className={
             "text-xs font-medium font-['Plus Jakarta Sans'] " +
-            `${mode == "dark" ? "text-[#e4e4e4]" : "text-black"}`
+            `${mode == "dark" ? "text-[#e4e4e4]" : "text-gray-600"}`
           }
         >
           {title}
